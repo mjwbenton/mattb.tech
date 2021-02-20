@@ -1,17 +1,11 @@
 {
-  "name": "@mattb.tech/website",
-  "version": "0.1.0",
+  "name": "@mattb.tech/monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Matthew Benton <m@mattb.tech>",
+  "license": "UNLICENSED",
   "private": true,
-  "license": "UNLIMITED",
-  "author": "Matt Benton <m@mattb.tech>",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "10.0.7",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
-  }
+  "workspaces": [
+    "website"
+  ]
 }
