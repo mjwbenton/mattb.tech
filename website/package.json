@@ -6,7 +6,7 @@
   "author": "Matt Benton <m@mattb.tech>",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "rm -Rf out .next && next build && next export",
     "start": "next start"
   },
   "dependencies": {
