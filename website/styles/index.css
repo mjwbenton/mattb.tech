@@ -10,17 +10,19 @@
       rgba(210, 55, 55, 1) 100%
     );
   }
+
+  body {
+    @apply bg-gray-100;
+  }
 }
 
-@layer components {
-  .border-with-gradient {
-    border-width: 6px;
+@layer utilities {
+  .border-gradient {
     border-image-source: var(--gradient);
     border-image-slice: 1;
   }
 
-  .clipped-background-gradient {
+  .background-gradient {
     background-image: var(--gradient);
-    background-clip: text;
   }
 }
