@@ -6,6 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "workspaces": [
-    "website"
+    "website",
+    "cdk"
   ]
 }

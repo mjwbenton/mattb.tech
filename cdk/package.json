@@ -1,0 +1,23 @@
+{
+  "name": "@mattb.tech/cdk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Matt Benton <m@mattb.tech>",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@aws-cdk/aws-cloudfront": "^1.90.1",
+    "@aws-cdk/aws-cloudfront-origins": "^1.90.1",
+    "@aws-cdk/aws-route53-targets": "^1.90.1",
+    "@aws-cdk/aws-s3": "^1.90.1",
+    "@aws-cdk/aws-s3-deployment": "^1.90.1",
+    "@aws-cdk/core": "^1.90.1",
+    "aws-cdk": "^1.90.1",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.5"
+  },
+  "scripts": {
+    "deploy": "cdk deploy --profile mattb.tech-deploy --require-approval never"
+  }
+}
