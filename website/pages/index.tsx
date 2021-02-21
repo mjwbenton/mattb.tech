@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="flex justify-center items-center h-screen w-screen bg-gray-100 text-transparent font-mono">
@@ -13,11 +11,10 @@ export default function Home() {
           </header>
           <main className="p-8 text-black text-lg text-opacity-20">
             <div className="w-6/12 h-96 float-left p-8 flex justify-center items-center">
-              <Image
+              <img
                 src="/headshot.jpg"
                 width={300}
                 height={300}
-                layout="fixed"
                 className="rounded-full col-span-1"
               />
             </div>
