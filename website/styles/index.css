@@ -4,15 +4,25 @@
 
 @layer base {
   :root {
+    --gradient-start: rgba(143, 57, 201, 1);
+    --gradient-end: rgba(210, 55, 55, 1);
     --gradient: linear-gradient(
       140deg,
-      rgba(143, 57, 201, 1) 0%,
-      rgba(210, 55, 55, 1) 100%
+      var(--gradient-start) 0%,
+      var(--gradient-end) 100%
     );
+    --background-base: rgba(244, 244, 244, 1);
+    --background-highlight: rgba(252, 252, 252, 1);
   }
 
   body {
-    @apply bg-gray-100;
+    background-image: linear-gradient(
+      140deg,
+      var(--background-base) 50%,
+      var(--background-highlight) 75%
+    );
+    background-repeat: repeat-x;
+    background-color: var(--background-highlight);
   }
 }
 
@@ -24,5 +34,9 @@
 
   .background-gradient {
     background-image: var(--gradient);
+  }
+
+  .svg-stroke-end-color {
+    stroke: var(--gradient-end);
   }
 }
