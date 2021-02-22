@@ -1,4 +1,4 @@
-import { GitHub, Link, Linkedin, Mail } from "react-feather";
+import { GitHub, Linkedin, Mail } from "react-feather";
 
 export default function Home() {
   return (
@@ -15,12 +15,7 @@ export default function Home() {
             </header>
             <main>
               <ContentBox float="left">
-                <img
-                  src="/headshot.jpg"
-                  width={300}
-                  height={300}
-                  className="rounded-full m-auto"
-                />
+                <Headshot />
               </ContentBox>
               <ContentBox float="right" border>
                 <span className="font-semibold">Developer.</span>{" "}
@@ -56,6 +51,28 @@ export default function Home() {
         </div>
       </div>
     </>
+  );
+}
+
+function Headshot() {
+  return (
+    <picture>
+      <source
+        srcSet={require("../headshot.jpg?resize&size=600&format=webp")}
+        type="image/webp"
+      />
+      <source
+        srcSet={require("../headshot.jpg?resize&size=600")}
+        type="image/jpeg"
+      />
+      <img
+        src={require("../headshot.jpg?resize&size=300")}
+        className="rounded-full m-auto"
+        width={300}
+        height={300}
+        alt="Headshot of me."
+      />
+    </picture>
   );
 }
 
