@@ -4,12 +4,12 @@ export default function Home() {
   return (
     <>
       {/* Wrapper Box. On large screens we set this to the size of the screen so that we can use minimum height in its child. */}
-      <div className="md:h-screen md:w-screen p-4 md:p-8 text-transparent font-mono text-lg md:text-xl">
+      <div className="md:h-screen md:w-screen p-4 md:p-8 text-transparent font-mono text-lg md:text-2xl">
         {/* Border box. On larger screens it sets a min-height to make the borders go to to the edge of the screen. */}
         <div className="flex md:min-h-full justify-center items-center border-8 border-gradient">
           {/* Centered content. Provides the text gradient. */}
           <div className="background-gradient bg-clip-text">
-            <header className="w-full p-8 text-center text-xl md:text-2xl">
+            <header className="w-full p-8 text-center text-2xl md:text-3xl">
               <span>mattb</span>
               <span className="text-gray-100 text-opacity-50">enton</span>
             </header>
