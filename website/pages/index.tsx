@@ -1,4 +1,5 @@
 import { GitHub, Linkedin, Mail } from "react-feather";
+import Img from "react-optimized-image";
 
 export default function Home() {
   return (
@@ -56,23 +57,14 @@ export default function Home() {
 
 function Headshot() {
   return (
-    <picture>
-      <source
-        srcSet={require("../headshot.jpg?resize&size=600&format=webp")}
-        type="image/webp"
-      />
-      <source
-        srcSet={require("../headshot.jpg?resize&size=600")}
-        type="image/jpeg"
-      />
-      <img
-        src={require("../headshot.jpg?resize&size=300")}
-        className="rounded-full m-auto"
-        width={300}
-        height={300}
-        alt="Headshot of me."
-      />
-    </picture>
+    <Img
+      src={require("../headshot.jpg")}
+      sizes={[600]}
+      className="rounded-full m-auto"
+      width={300}
+      height={300}
+      alt="Headshot of me."
+    />
   );
 }
 
