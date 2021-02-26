@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
           name="description"
           content="Matt Benton is a UK-based developer."
         />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
     </>
