@@ -9,7 +9,10 @@
     "build": "rm -Rf out .next && next build && next export",
     "start": "next start",
     "check": "../scripts/check.sh",
-    "fix": "../scripts/fix.sh"
+    "fix": "../scripts/fix.sh",
+    "site-test": "npm run pa11y && npm run lighthouse",
+    "lighthouse": "lhci autorun",
+    "pa11y": "pa11y-ci --config pa11y.js"
   },
   "dependencies": {
     "next": "10.0.7",
@@ -23,9 +26,11 @@
     "sharp": "^0.27.2"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.7.0",
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
     "autoprefixer": "^10.2.4",
+    "pa11y-ci": "^2.4.0",
     "postcss": "^8.2.6",
     "prettier": "^2.2.1",
     "tailwindcss": "^2.0.3",

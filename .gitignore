@@ -5,3 +5,4 @@ out
 yarn-debug.log*
 yarn-error.log*
 cdk.out
+.lighthouseci

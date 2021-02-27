@@ -14,6 +14,7 @@
     "deploy": "yarn workspace @mattb.tech/cdk run deploy",
     "start": "yarn workspace @mattb.tech/website run start",
     "check": "yarn workspaces run check",
-    "fix": "yarn workspaces run fix"
+    "fix": "yarn workspaces run fix",
+    "site-test": "yarn workspace @mattb.tech/website run site-test"
   }
 }

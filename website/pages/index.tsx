@@ -11,8 +11,10 @@ export default function Home() {
           {/* Centered content. Provides the text gradient. */}
           <div className="background-gradient bg-clip-text">
             <header className="w-full pt-16 md:py-24 text-center text-2xl md:text-3xl">
-              <span>mattb</span>
-              <span className="text-gray-100 text-opacity-50">enton</span>
+              <h1>
+                <span>mattb</span>
+                <span className="text-gray-100 text-opacity-50">enton</span>
+              </h1>
             </header>
             <main>
               <ContentBox float="left">
