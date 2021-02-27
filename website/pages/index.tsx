@@ -1,4 +1,4 @@
-import { GitHub, Linkedin, Mail } from "react-feather";
+import { GitHub, IconProps, Linkedin, Mail } from "react-feather";
 import Img from "react-optimized-image";
 
 export default function Home() {
@@ -70,7 +70,7 @@ function Headshot() {
   );
 }
 
-function Icon({ component }) {
+function Icon({ component }: { component: React.FC<IconProps> }) {
   const Component = component;
   return (
     <Component
@@ -80,7 +80,17 @@ function Icon({ component }) {
   );
 }
 
-function ContentBox({ children, float, border = false, className = "" }) {
+function ContentBox({
+  children,
+  float,
+  border = false,
+  className = "",
+}: {
+  children: React.ReactNode;
+  float: "left" | "right";
+  border?: boolean;
+  className?: string;
+}) {
   return (
     <div
       className={`max-w-full overflow-hidden md:w-6/12 py-16 px-8 text-justify
