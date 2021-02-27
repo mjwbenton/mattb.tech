@@ -8,5 +8,12 @@
   "workspaces": [
     "website",
     "cdk"
-  ]
+  ],
+  "scripts": {
+    "build": "yarn workspace @mattb.tech/website run build",
+    "deploy": "yarn workspace @mattb.tech/cdk run deploy",
+    "start": "yarn workspace @mattb.tech/website run start",
+    "check": "yarn workspaces run check",
+    "fix": "yarn workspaces run fix"
+  }
 }

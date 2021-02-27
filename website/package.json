@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "rm -Rf out .next && next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "check": "../scripts/check.sh",
+    "fix": "../scripts/fix.sh"
   },
   "dependencies": {
     "next": "10.0.7",

@@ -18,6 +18,8 @@
     "typescript": "^4.1.5"
   },
   "scripts": {
-    "deploy": "cdk deploy --profile mattb.tech-deploy --require-approval never"
+    "deploy": "cdk deploy --profile mattb.tech-deploy --require-approval never",
+    "check": "../scripts/check.sh",
+    "fix": "../scripts/fix.sh"
   }
 }
