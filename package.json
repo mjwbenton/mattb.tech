@@ -12,6 +12,7 @@
   "scripts": {
     "build": "yarn workspace @mattb.tech/website run build",
     "deploy": "yarn workspace @mattb.tech/cdk run deploy",
+    "dev": "yarn workspace @mattb.tech/website run dev",
     "start": "yarn workspace @mattb.tech/website run start",
     "check": "yarn workspaces run check",
     "fix": "yarn workspaces run fix",

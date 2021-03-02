@@ -15,6 +15,7 @@
     "pa11y": "pa11y-ci --config pa11y.js"
   },
   "dependencies": {
+    "framer-motion": "^3.9.1",
     "next": "10.0.7",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^3.0.0-canary.10",
