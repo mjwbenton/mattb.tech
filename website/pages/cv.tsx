@@ -191,6 +191,14 @@ export default function CV() {
             <DetailPill>PostgreSQL</DetailPill>
           </Content>
         </Section>
+        <Section>
+          <SectionHeading>Other</SectionHeading>
+          <Content>
+            <DetailPill>Git</DetailPill>
+            <DetailPill>Test-driven-development</DetailPill>
+            <DetailPill>Linting</DetailPill>
+          </Content>
+        </Section>
       </ContentBox>
       <ContentBox float="left" border className="text-lg">
         <ContentBoxHeading>
