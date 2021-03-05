@@ -1,7 +1,7 @@
 import { GitHub, IconProps, Linkedin, Mail, FileText } from "react-feather";
 import Link from "next/link";
 import Img from "react-optimized-image";
-import ContentBox from "../components/ContentBox";
+import ContentBox, { Content } from "../components/ContentBox";
 import Icon from "../components/Icon";
 
 export default function Home() {
@@ -11,39 +11,38 @@ export default function Home() {
         <Headshot />
       </ContentBox>
       <ContentBox float="right" border>
-        <span className="font-semibold">Developer.</span>{" "}
-        <span>
-          Recently finished 10 years at Amazon and IMDb. Looking for a new gig
-          later in 2021.
-        </span>
+        <Content important>
+          <span className="font-semibold">Developer.</span> Recently finished 10
+          years at Amazon and IMDb. Looking for a new gig later in 2021.
+        </Content>
       </ContentBox>
       <ContentBox float="right" border>
         <ul className="space-y-4 text-right">
           <li>
+            <Link href="/cv">
+              <a>
+                <Icon component={FileText} inline color="end" />
+                CV / Resume
+              </a>
+            </Link>
+          </li>
+          <li>
             <a href="https://github.com/mjwbenton">
-              <Icon component={GitHub} inline />
+              <Icon component={GitHub} inline color="end" />
               GitHub
             </a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/mattb-tech/">
-              <Icon component={Linkedin} inline />
+              <Icon component={Linkedin} inline color="end" />
               Linkedin
             </a>
           </li>
           <li>
             <a href="mailto:m@mattb.tech">
-              <Icon component={Mail} inline />
+              <Icon component={Mail} inline color="end" />
               Contact
             </a>
-          </li>
-          <li>
-            <Link href="/cv">
-              <a>
-                <Icon component={FileText} inline />
-                CV
-              </a>
-            </Link>
           </li>
         </ul>
       </ContentBox>

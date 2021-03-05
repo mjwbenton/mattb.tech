@@ -20,14 +20,14 @@ function MyApp({ Component, pageProps }: any) {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       {/* Wrapper Box. On large screens we set this to the size of the screen so that we can use minimum height in its child. */}
-      <div className="md:h-screen md:w-screen p-4 md:p-8 text-transparent font-mono text-lg md:text-2xl">
+      <div className="lg:h-screen lg:w-screen p-4 lg:p-8 font-mono">
         {/* Border box. On larger screens it sets a min-height to make the borders go to to the edge of the screen. */}
-        <div className="flex md:min-h-full border-8 border-gradient">
+        <div className="flex lg:min-h-full border-8 border-gradient">
           {/* Centered content. Provides the text gradient. */}
           <div className="background-gradient bg-clip-text w-full">
-            <header className="w-full pt-16 md:py-24 text-center text-2xl md:text-3xl">
+            <header className="w-full pt-16 lg:py-24 text-center text-2xl lg:text-3xl">
               <h1>
-                <span>mattb</span>
+                <span className="text-transparent">mattb</span>
                 <span className="text-gray-100 text-opacity-50">enton</span>
               </h1>
               <ReturnButton />
@@ -58,7 +58,7 @@ function ReturnButton() {
           exit={{
             opacity: 0,
           }}
-          className="absolute top-12 right-12 md:top-16 md:right-16"
+          className="absolute top-12 right-12 lg:top-16 lg:right-16"
         >
           <Link href="/">
             <a>

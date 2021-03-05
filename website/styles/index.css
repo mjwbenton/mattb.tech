@@ -39,4 +39,13 @@
   .svg-stroke-end-color {
     stroke: var(--gradient-end);
   }
+
+  .svg-stroke-start-color {
+    stroke: var(--gradient-start);
+  }
+
+  .bullet::before {
+    content: "⇥ ";
+    font-size: theme("fontSize.2xl");
+  }
 }
