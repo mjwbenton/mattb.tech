@@ -1,4 +1,5 @@
 import path from "path";
+import fs from "fs";
 import * as cdk from "@aws-cdk/core";
 import * as s3 from "@aws-cdk/aws-s3";
 import * as route53 from "@aws-cdk/aws-route53";
@@ -7,6 +8,7 @@ import * as cloudfront from "@aws-cdk/aws-cloudfront";
 import * as acm from "@aws-cdk/aws-certificatemanager";
 import * as s3deploy from "@aws-cdk/aws-s3-deployment";
 import * as origins from "@aws-cdk/aws-cloudfront-origins";
+import * as lambda from "@aws-cdk/aws-lambda";
 import WebsiteRedirect from "./WebsiteRedirect";
 
 const ZONE_NAME = "mattb.tech";
@@ -52,6 +54,7 @@ export class MattbTechWebsite extends cdk.Stack {
     const pagesBucket = new s3.Bucket(this, "PagesBucket", {
       publicReadAccess: true,
       websiteIndexDocument: "index.html",
+      websiteErrorDocument: "404.html",
     });
 
     const assetsBucket = new s3.Bucket(this, "AssetsBucket", {
@@ -64,17 +67,31 @@ export class MattbTechWebsite extends cdk.Stack {
       hostedZone: hostedZone,
     });
 
+    const routerLambda = new lambda.Function(this, "RouterFunction", {
+      runtime: lambda.Runtime.NODEJS_12_X,
+      handler: "dist/index.handler",
+      code: lambda.Code.fromInline(
+        fs.readFileSync(path.join(__dirname, "./edge-router.js")).toString()
+      ),
+    });
+
     const distribution = new cloudfront.Distribution(this, "Distribution", {
       defaultBehavior: {
         origin: new origins.S3Origin(pagesBucket),
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+        edgeLambdas: [
+          {
+            functionVersion: routerLambda.currentVersion,
+            eventType: cloudfront.LambdaEdgeEventType.ORIGIN_REQUEST,
+          },
+        ],
       },
       domainNames: [DOMAIN_NAME],
       certificate,
     });
     distribution.addBehavior("_next/*", new origins.S3Origin(assetsBucket));
 
-    const pagesDeploy = new s3deploy.BucketDeployment(this, "DeployPages", {
+    new s3deploy.BucketDeployment(this, "DeployPages", {
       sources: [
         s3deploy.Source.asset(OUT_PATH, {
           exclude: ["_next"],
@@ -89,7 +106,7 @@ export class MattbTechWebsite extends cdk.Stack {
       distribution,
     });
 
-    const assetsDeploy = new s3deploy.BucketDeployment(this, "DeployAssets", {
+    new s3deploy.BucketDeployment(this, "DeployAssets", {
       sources: [
         s3deploy.Source.asset(OUT_PATH, {
           exclude: ["*.html"],
