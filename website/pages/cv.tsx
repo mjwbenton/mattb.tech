@@ -53,7 +53,7 @@ export default function CV() {
               <DetailPill>Documentation</DetailPill>
               <DetailPill>AWS</DetailPill>
               <DetailPill>S3</DetailPill>
-              <DetailPill>SNS/SQS</DetailPill>
+              <DetailPill>SNS / SQS</DetailPill>
             </Item>
           </List>
         </Section>
@@ -183,11 +183,12 @@ export default function CV() {
           </Content>
           <Content>
             <DetailPill>AWS</DetailPill>
+            <DetailPill>CDK / Cloudformation</DetailPill>
             <DetailPill>Lambda</DetailPill>
-            <DetailPill>DynamoDB</DetailPill>
-            <DetailPill>PostgreSQL</DetailPill>
             <DetailPill>GraphQL</DetailPill>
             <DetailPill>Rest</DetailPill>
+            <DetailPill>DynamoDB</DetailPill>
+            <DetailPill>PostgreSQL</DetailPill>
           </Content>
         </Section>
       </ContentBox>
