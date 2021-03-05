@@ -19,10 +19,8 @@ function MyApp({ Component, pageProps }: any) {
         />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      {/* Wrapper Box. On large screens we set this to the size of the screen so that we can use minimum height in its child. */}
-      <div className="lg:h-screen lg:w-screen p-4 lg:p-8 font-mono">
-        {/* Border box. On larger screens it sets a min-height to make the borders go to to the edge of the screen. */}
-        <div className="flex lg:min-h-full border-8 border-gradient">
+      <div className="p-4 lg:p-8 font-mono base-background-gradient">
+        <div className="flex border-8 border-gradient min-h-screen-spacing-8 lg:min-h-screen-spacing-16 box-border">
           {/* Centered content. Provides the text gradient. */}
           <div className="background-gradient bg-clip-text w-full">
             <header className="w-full pt-16 lg:py-24 text-center text-2xl lg:text-3xl">

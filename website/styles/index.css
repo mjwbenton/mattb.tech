@@ -16,12 +16,6 @@
   }
 
   body {
-    background-image: linear-gradient(
-      140deg,
-      var(--background-base) 50%,
-      var(--background-highlight) 75%
-    );
-    background-repeat: repeat-x;
     background-color: var(--background-highlight);
   }
 }
@@ -36,6 +30,14 @@
     background-image: var(--gradient);
   }
 
+  .base-background-gradient {
+    background-image: linear-gradient(
+      140deg,
+      var(--background-base) 50%,
+      var(--background-highlight) 75%
+    );
+  }
+
   .svg-stroke-end-color {
     stroke: var(--gradient-end);
   }
@@ -47,5 +49,15 @@
   .bullet::before {
     content: "⇥ ";
     font-size: theme("fontSize.2xl");
+  }
+
+  @variants responsive {
+    .min-h-screen-spacing-8 {
+      min-height: calc(100vh - theme("spacing.8"));
+    }
+
+    .min-h-screen-spacing-16 {
+      min-height: calc(100vh - theme("spacing.16"));
+    }
   }
 }
