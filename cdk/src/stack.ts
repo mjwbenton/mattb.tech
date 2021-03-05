@@ -69,7 +69,7 @@ export class MattbTechWebsite extends cdk.Stack {
 
     const routerLambda = new lambda.Function(this, "RouterFunction", {
       runtime: lambda.Runtime.NODEJS_12_X,
-      handler: "dist/index.handler",
+      handler: "index.handler",
       code: lambda.Code.fromInline(
         fs.readFileSync(path.join(__dirname, "./edge-router.js")).toString()
       ),
