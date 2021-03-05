@@ -16,7 +16,7 @@ function redirectTo(uri) {
   };
 }
 
-export const handler = async (event) => {
+exports.handler = async (event) => {
   const request = event.Records[0].cf.request;
 
   if (request.uri.match(HTML_EXTENSION_REGEX)) {
