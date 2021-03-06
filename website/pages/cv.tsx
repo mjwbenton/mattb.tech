@@ -109,7 +109,7 @@ export default function CV() {
             </Item>
             <Item>
               Owned the process of creating company-wide Java and Javascript
-              coding-standards, writing significant portions of the documents as
+              coding standards, writing significant portions of the documents as
               well as gathering input from others and resolving disagreements.
               <DetailPill>Java</DetailPill>
               <DetailPill>Javascript</DetailPill>
