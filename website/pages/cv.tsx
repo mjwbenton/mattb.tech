@@ -1,5 +1,5 @@
 import React from "react";
-import { Award, Book, Briefcase } from "react-feather";
+import { Award, Book, Briefcase, Download } from "react-feather";
 import ContentBox, {
   Content,
   ContentBoxHeading,
@@ -21,6 +21,10 @@ export default function CV() {
         <Content important>
           During that time I worked in many different areas of the business, and
           across the tech stack.
+        </Content>
+        <Content className="print:hidden">
+          <Icon inline component={Download} />
+          <ExternalLink href="/cv.pdf">Download PDF Version</ExternalLink>
         </Content>
       </ContentBox>
       <ContentBox float="right" border>

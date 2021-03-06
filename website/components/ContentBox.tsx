@@ -31,15 +31,17 @@ export default function ContentBox({
 export function Content({
   children,
   important = false,
+  className = "",
 }: {
   children: React.ReactNode;
   important?: boolean;
+  className?: string;
 }) {
   return (
     <p
       className={`text-white print:text-black print:text-opacity-100 ${
         important ? "text-opacity-0 text-lg" : "text-opacity-10 text-base"
-      }`}
+      } ${className}`}
     >
       <span>{children}</span>
     </p>

@@ -38,6 +38,13 @@ const REDIRECT_DOMAIN_NAMES = [
 
 const OUT_PATH = path.join(__dirname, "../../website/out");
 
+const CACHE_FOREVER = s3deploy.CacheControl.fromString(
+  "max-age=31536000,public,immutable"
+);
+const DONT_CACHE = s3deploy.CacheControl.fromString(
+  "max-age=0,no-cache,no-store,must-revalidate"
+);
+
 export class MattbTechWebsite extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
@@ -58,6 +65,11 @@ export class MattbTechWebsite extends cdk.Stack {
     });
 
     const assetsBucket = new s3.Bucket(this, "AssetsBucket", {
+      publicReadAccess: true,
+      websiteIndexDocument: "index.html",
+    });
+
+    const pdfBucket = new s3.Bucket(this, "PdfBucket", {
       publicReadAccess: true,
       websiteIndexDocument: "index.html",
     });
@@ -90,6 +102,7 @@ export class MattbTechWebsite extends cdk.Stack {
       certificate,
     });
     distribution.addBehavior("_next/*", new origins.S3Origin(assetsBucket));
+    distribution.addBehavior("cv.pdf", new origins.S3Origin(pdfBucket));
 
     new s3deploy.BucketDeployment(this, "DeployPages", {
       sources: [
@@ -98,11 +111,7 @@ export class MattbTechWebsite extends cdk.Stack {
         }),
       ],
       destinationBucket: pagesBucket,
-      cacheControl: [
-        s3deploy.CacheControl.fromString(
-          "max-age=0,no-cache,no-store,must-revalidate"
-        ),
-      ],
+      cacheControl: [DONT_CACHE],
       distribution,
     });
 
@@ -113,11 +122,20 @@ export class MattbTechWebsite extends cdk.Stack {
         }),
       ],
       destinationBucket: assetsBucket,
-      cacheControl: [
-        s3deploy.CacheControl.fromString("max-age=31536000,public,immutable"),
-      ],
+      cacheControl: [CACHE_FOREVER],
       distribution,
       prune: false,
+    });
+
+    new s3deploy.BucketDeployment(this, "DeployPdf", {
+      sources: [
+        s3deploy.Source.asset(path.join(__dirname, "../../pdf-cv"), {
+          exclude: ["**", "!cv.pdf"],
+        }),
+      ],
+      destinationBucket: pdfBucket,
+      cacheControl: [DONT_CACHE],
+      distribution,
     });
 
     new route53.ARecord(this, "DomainRecord", {
