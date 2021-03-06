@@ -7,7 +7,8 @@
   "private": true,
   "workspaces": [
     "website",
-    "cdk"
+    "cdk",
+    "pdf-cv"
   ],
   "scripts": {
     "build": "yarn workspace @mattb.tech/website run build",
