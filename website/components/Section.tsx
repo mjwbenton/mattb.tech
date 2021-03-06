@@ -10,7 +10,7 @@ export function SectionHeading({
   inline?: boolean;
 }) {
   return (
-    <h3 className={`${inline ? "inline" : ""} text-lg print:text-black`}>
+    <h3 className={`${inline ? "inline" : ""} text-lg`}>
       <span>{children}</span>
     </h3>
   );

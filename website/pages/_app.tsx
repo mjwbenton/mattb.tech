@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: any) {
         />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <div className="p-4 lg:p-8 print:p-4 font-mono base-background-gradient print:bg-white">
+      <div className="p-4 lg:p-8 print:p-4 font-mono base-background-gradient print:bg-white text-transparent print:text-black">
         <div className="flex border-8 border-gradient print:border-none min-h-screen-spacing-8 lg:min-h-screen-spacing-16 box-border">
           <div className="background-gradient print:bg-white bg-clip-text print:bg-clip-border w-full">
             <header className="w-full pt-16 lg:py-24 text-center text-2xl lg:text-3xl print:pt-8 print:text-xl">

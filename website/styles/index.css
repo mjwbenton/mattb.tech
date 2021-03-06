@@ -58,6 +58,12 @@
     }
   }
 
+  @variants responsive {
+    .children-text-black > * {
+      color: black;
+    }
+  }
+
   .bullet::before {
     content: "⇥ ";
     font-size: theme("fontSize.2xl");
