@@ -64,11 +64,6 @@
     }
   }
 
-  .bullet::before {
-    content: "⇥ ";
-    font-size: theme("fontSize.2xl");
-  }
-
   @variants responsive {
     .min-h-screen-spacing-8 {
       min-height: calc(100vh - theme("spacing.8"));
@@ -77,5 +72,12 @@
     .min-h-screen-spacing-16 {
       min-height: calc(100vh - theme("spacing.16"));
     }
+  }
+}
+
+@layer components {
+  .bullet::before {
+    content: "⇥ ";
+    font-size: theme("fontSize.2xl");
   }
 }
