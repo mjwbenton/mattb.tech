@@ -29,7 +29,9 @@ export default function CV() {
           Work: Amazon/IMDb
         </ContentBoxHeading>
         <Section>
-          <SectionHeading inline>Publishing&nbsp;Team</SectionHeading>
+          <SectionHeading inline>
+            Publishing&nbsp;Team – Sr.&nbsp;SDE
+          </SectionHeading>
           <DetailPill>2019-2021</DetailPill>
           <DetailPill>Bristol, UK</DetailPill>
           <Content>
@@ -58,7 +60,9 @@ export default function CV() {
           </List>
         </Section>
         <Section>
-          <SectionHeading inline>Website&nbsp;Team</SectionHeading>
+          <SectionHeading inline>
+            Website&nbsp;Team – Sr.&nbsp;SDE
+          </SectionHeading>
           <DetailPill>2016-2019</DetailPill>
           <DetailPill>Seattle, WA</DetailPill>
           <Content>
@@ -86,7 +90,7 @@ export default function CV() {
           </List>
         </Section>
         <Section>
-          <SectionHeading inline>Content&nbsp;Team</SectionHeading>
+          <SectionHeading inline>Content&nbsp;Team – SDE</SectionHeading>
           <DetailPill>2011-2016</DetailPill>
           <DetailPill>Bristol and Seattle</DetailPill>
           <Content>
@@ -196,7 +200,10 @@ export default function CV() {
           <Content>
             <DetailPill>Git</DetailPill>
             <DetailPill>Test-driven-development</DetailPill>
-            <DetailPill>Linting</DetailPill>
+            <DetailPill>Bash</DetailPill>
+            <DetailPill>Linux</DetailPill>
+            <DetailPill>Agile</DetailPill>
+            <DetailPill>Continuous Deployment</DetailPill>
           </Content>
         </Section>
       </ContentBox>
@@ -210,6 +217,19 @@ export default function CV() {
             MEng Computer Science 1st class from University of Bristol
           </SectionHeading>
           <DetailPill>2007-2011</DetailPill>
+          <List>
+            <Item>
+              Scholarships for academic achievement from UBS Bank and Mysis
+              Foundation.
+            </Item>
+            <Item>
+              Netcraft award for best Computer Scientist in the second year.
+            </Item>
+            <Item>
+              Won EPSRC summer bursary to develop work on “Vision based
+              exploration for wheeled robots” (2009).
+            </Item>
+          </List>
         </Section>
         <Section>
           <SectionHeading inline>Bog-standard UK education</SectionHeading>
