@@ -36,7 +36,7 @@ export default function Icon({
         color === "start" ? "svg-stroke-start-color" : "svg-stroke-end-color"
       } ${
         inline ? `${INLINE_CLASSES} ${SIZES[size].additionalInlineClasses}` : ""
-      }`}
+      } print:svg-stroke-black`}
     />
   );
 }

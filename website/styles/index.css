@@ -18,6 +18,12 @@
   body {
     background-color: var(--background-highlight);
   }
+
+  @media print {
+    body {
+      background-color: white;
+    }
+  }
 }
 
 @layer utilities {
@@ -44,6 +50,12 @@
 
   .svg-stroke-start-color {
     stroke: var(--gradient-start);
+  }
+
+  @variants responsive {
+    .svg-stroke-black {
+      stroke: black;
+    }
   }
 
   .bullet::before {
