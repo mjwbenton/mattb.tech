@@ -45,8 +45,8 @@ export default function CV() {
           <List>
             <Item>
               Led the way on migrating the whole of IMDb to a federated GraphQL
-              architecture, with tens of services, across many teams, federated
-              within the first six months.
+              architecture, with more than ten services, across many teams,
+              federated within the first six months.
               <DetailPill>Typescript</DetailPill>
               <DetailPill>Node</DetailPill>
               <DetailPill>Serverless</DetailPill>
