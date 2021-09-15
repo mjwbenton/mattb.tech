@@ -1,5 +1,5 @@
 export function Section({ children }: { children: React.ReactNode }) {
-  return <div className="space-y-8 text-left">{children}</div>;
+  return <div className="space-y-6 text-left">{children}</div>;
 }
 
 export function SectionHeading({
