@@ -1,4 +1,8 @@
-import { IconProps } from "react-feather";
+import { IconProps as FeatherIconProps } from "react-feather";
+
+type IconComponent =
+  | React.FC<FeatherIconProps>
+  | React.FC<{ size: number; className: string }>;
 
 const SIZES = {
   base: {
@@ -23,7 +27,7 @@ export default function Icon({
   inline = false,
   color = "start",
 }: {
-  component: React.FC<IconProps>;
+  component: IconComponent;
   size?: keyof typeof SIZES;
   inline?: boolean;
   color?: "start" | "end";

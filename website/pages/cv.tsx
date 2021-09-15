@@ -1,5 +1,6 @@
 import React from "react";
 import { Award, Book, Briefcase, Download } from "react-feather";
+import Candide from "../components/Candide";
 import ContentBox, {
   Content,
   ContentBoxHeading,
@@ -28,6 +29,18 @@ export default function CV() {
         </Content>
       </ContentBox>
       <ContentBox float="right" border>
+        <ContentBoxHeading>
+          <Icon inline component={Candide} size="lg" />
+          Work: Candide
+        </ContentBoxHeading>
+        <Section>
+          <SectionHeading inline>
+            Admissions Team — Senior Engineer
+          </SectionHeading>
+          <DetailPill>2021-current</DetailPill>
+          <DetailPill>Bristol, UK</DetailPill>
+          <Content>... nothing to share yet ...</Content>
+        </Section>
         <ContentBoxHeading>
           <Icon inline component={Briefcase} size="lg" />
           Work: Amazon/IMDb

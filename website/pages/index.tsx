@@ -3,6 +3,7 @@ import Link from "next/link";
 import Img from "react-optimized-image";
 import ContentBox, { Content } from "../components/ContentBox";
 import Icon from "../components/Icon";
+import Candide from "../components/Candide";
 
 export default function Home() {
   return (
@@ -12,8 +13,13 @@ export default function Home() {
       </ContentBox>
       <ContentBox float="right" border>
         <Content important>
-          <span className="font-semibold">Developer.</span> Recently finished 10
-          years at Amazon and IMDb. Looking for a new gig later in 2021.
+          <span className="font-semibold">Developer.</span> Ex Amazon/IMDb,
+          currently working at{" "}
+          <a href="https://candide.com">
+            <Icon component={Candide} inline color="end" />
+            Candide
+          </a>{" "}
+          in Bristol, UK.
         </Content>
       </ContentBox>
       <ContentBox float="right" border>
