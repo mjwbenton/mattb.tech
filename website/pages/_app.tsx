@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }: any) {
             <header className="w-full pt-16 lg:py-20 text-center text-2xl lg:text-3xl print:py-8 print:text-xl">
               <h1>
                 <span className="text-brandPurple print:hidden">mattb</span>
-                <span className="text-brandPurple text-opacity-50 print:hidden">
+                <span className="text-brandPurple text-opacity-70 print:hidden">
                   enton
                 </span>
                 <span className="hidden print:inline text-black">
