@@ -15,11 +15,11 @@ export default function CV() {
   return (
     <main>
       <ContentBox float="left">
-        <Content important>
+        <Content className="text-lg">
           Senior developer and tech-lead with 10 years experience at Amazon
           behind me.
         </Content>
-        <Content important>
+        <Content className="text-lg">
           During that time I worked in many different areas of the business, and
           across the tech stack.
         </Content>
@@ -165,7 +165,7 @@ export default function CV() {
       </ContentBox>
       <ContentBox float="left" border>
         <ContentBoxHeading>
-          <Icon inline color="end" size="lg" component={Book} />
+          <Icon inline size="lg" component={Book} />
           Tech Skills
         </ContentBoxHeading>
         <Section>
@@ -224,9 +224,9 @@ export default function CV() {
           </Content>
         </Section>
       </ContentBox>
-      <ContentBox float="left" border className="text-lg">
+      <ContentBox float="left" border>
         <ContentBoxHeading>
-          <Icon inline size="lg" color="end" component={Award} />
+          <Icon inline size="lg" component={Award} />
           Education
         </ContentBoxHeading>
         <Section>
