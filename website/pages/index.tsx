@@ -12,7 +12,7 @@ export default function Home() {
         <Headshot />
       </ContentBox>
       <ContentBox float="right" border>
-        <Content important>
+        <Content className="text-lg">
           <span className="font-semibold">Developer.</span> Ex Amazon/IMDb,
           currently working at{" "}
           <a href="https://candide.com">
@@ -27,26 +27,26 @@ export default function Home() {
           <li>
             <Link href="/cv">
               <a>
-                <Icon component={FileText} inline color="end" />
+                <Icon component={FileText} inline />
                 CV / Resume
               </a>
             </Link>
           </li>
           <li>
             <a href="https://github.com/mjwbenton">
-              <Icon component={GitHub} inline color="end" />
+              <Icon component={GitHub} inline />
               GitHub
             </a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/mattb-tech/">
-              <Icon component={Linkedin} inline color="end" />
+              <Icon component={Linkedin} inline />
               Linkedin
             </a>
           </li>
           <li>
             <a href="mailto:m@mattb.tech">
-              <Icon component={Mail} inline color="end" />
+              <Icon component={Mail} inline />
               Contact
             </a>
           </li>

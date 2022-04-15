@@ -1,7 +1,7 @@
 import Head from "next/head";
 import "../styles/index.css";
 import { useRouter } from "next/router";
-import { X } from "react-feather";
+import { ArrowLeft } from "react-feather";
 import Icon from "../components/Icon";
 import React from "react";
 import Link from "next/link";
@@ -19,13 +19,13 @@ function MyApp({ Component, pageProps }: any) {
         />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <div className="p-4 lg:p-8 print:p-4 font-mono base-background-gradient print:bg-white text-transparent print:text-black">
-        <div className="flex border-8 border-gradient print:border-none min-h-screen-spacing-8 lg:min-h-screen-spacing-16 box-border">
-          <div className="background-gradient print:bg-white bg-clip-text print:bg-clip-border w-full">
+      <div className="p-4 lg:p-8 print:p-4 font-mono bg-brandBackground print:bg-white text-brandPurple print:text-black">
+        <div className="flex border-8 border-brandPurple print:border-none min-h-screen-spacing-8 lg:min-h-screen-spacing-16 box-border">
+          <div className="w-full">
             <header className="w-full pt-16 lg:py-20 text-center text-2xl lg:text-3xl print:py-8 print:text-xl">
               <h1>
-                <span className="text-transparent print:hidden">mattb</span>
-                <span className="text-gray-100 text-opacity-50 print:hidden">
+                <span className="text-brandPurple print:hidden">mattb</span>
+                <span className="text-brandPurple text-opacity-50 print:hidden">
                   enton
                 </span>
                 <span className="hidden print:inline text-black">
@@ -62,11 +62,11 @@ function ReturnButton() {
           exit={{
             opacity: 0,
           }}
-          className="absolute top-12 right-12 lg:top-16 lg:right-16 print:hidden"
+          className="absolute top-12 left-12 lg:top-16 lg:left-16 print:hidden"
         >
           <Link href="/">
             <a>
-              <Icon component={X} size="2xl" />
+              <Icon component={ArrowLeft} size="2xl" />
             </a>
           </Link>
         </motion.div>

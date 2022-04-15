@@ -6,6 +6,11 @@ module.exports = {
       screens: {
         print: { raw: "print" },
       },
+      colors: {
+        brandBackground: "rgb(252, 252, 252)",
+        brandPurple: "rgb(143, 57, 201)",
+        brandRed: "rgb(210, 55, 55)",
+      },
     },
   },
   variants: {

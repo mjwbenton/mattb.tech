@@ -2,58 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --gradient-start: rgba(143, 57, 201, 1);
-    --gradient-end: rgba(210, 55, 55, 1);
-    --gradient: linear-gradient(
-      140deg,
-      var(--gradient-start) 0%,
-      var(--gradient-end) 100%
-    );
-    --background-base: rgba(244, 244, 244, 1);
-    --background-highlight: rgba(252, 252, 252, 1);
-  }
-
-  body {
-    background-color: var(--background-highlight);
-  }
-
-  @media print {
-    body {
-      background-color: white;
-    }
-  }
-}
-
 @layer utilities {
-  .border-gradient {
-    border-image-source: var(--gradient);
-    border-image-slice: 1;
-  }
-
-  .background-gradient {
-    background-image: var(--gradient);
-  }
-
-  .base-background-gradient {
-    background-image: linear-gradient(
-      140deg,
-      var(--background-base) 50%,
-      var(--background-highlight) 75%
-    );
-  }
-
-  .svg-stroke-end-color {
-    stroke: var(--gradient-end);
-    color: var(--gradient-end);
-  }
-
-  .svg-stroke-start-color {
-    stroke: var(--gradient-start);
-    color: var(--gradient-start);
-  }
-
   @variants responsive {
     .svg-stroke-black {
       stroke: black;

@@ -36,11 +36,9 @@ export default function Icon({
   return (
     <Component
       size={SIZES[size].size}
-      className={`${
-        color === "start" ? "svg-stroke-start-color" : "svg-stroke-end-color"
-      } ${
+      className={
         inline ? `${INLINE_CLASSES} ${SIZES[size].additionalInlineClasses}` : ""
-      } print:svg-stroke-black`}
+      }
     />
   );
 }
