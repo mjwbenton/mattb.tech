@@ -20,13 +20,34 @@ export default function CV() {
           behind me.
         </Content>
         <Content className="text-lg">
-          During that time I worked in many different areas of the business, and
-          across the tech stack.
+          During that time I worked in many different areas of the business,
+          with a bias towards product-focused full-stack engineering.
         </Content>
         <Content className="print:hidden">
           <Icon inline component={Download} />
           <ExternalLink href="/cv.pdf">Download PDF Version</ExternalLink>
         </Content>
+        <Section>
+          <SectionHeading bold>Leadership</SectionHeading>
+          <Content>
+            Leading and building teams, with a focus on high standards,
+            mentorship, positive culture, and hiring.
+          </Content>
+          <Content>
+            <DetailPill>Team building</DetailPill>
+            <DetailPill>Team direction and mission</DetailPill>
+            <DetailPill>Mentoring</DetailPill>
+            <DetailPill>Interviewing / Hiring</DetailPill>
+            <DetailPill>Product ownership</DetailPill>
+          </Content>
+          <Content>
+            <DetailPill>Pull requests</DetailPill>
+            <DetailPill>Linting</DetailPill>
+            <DetailPill>Testing</DetailPill>
+            <DetailPill>Pairing</DetailPill>
+            <DetailPill>Continuous integration/deployment</DetailPill>
+          </Content>
+        </Section>
         <Section>
           <SectionHeading bold>Front-end</SectionHeading>
           <Content>
@@ -37,49 +58,32 @@ export default function CV() {
             <DetailPill>HTML</DetailPill>
             <DetailPill>CSS</DetailPill>
             <DetailPill>Javascript</DetailPill>
-          </Content>
-          <Content>
             <DetailPill>React</DetailPill>
             <DetailPill>Typescript</DetailPill>
-            <DetailPill>Sass</DetailPill>
-            <DetailPill>Webpack</DetailPill>
-            <DetailPill>Tailwind CSS</DetailPill>
             <DetailPill>Next.js</DetailPill>
           </Content>
         </Section>
         <Section>
           <SectionHeading bold>Back-end</SectionHeading>
           <Content>
-            Built many services, working mostly in AWS with
-            infrastructure-as-code.
+            Built and operated many services and back-end systems. Responsible
+            for design, code, reliability, and infrastructure.
           </Content>
           <Content>
             <DetailPill>Service-oriented-architecture</DetailPill>
+            <DetailPill>Infrastructure-as-code</DetailPill>
             <DetailPill>Serverless</DetailPill>
-          </Content>
-          <Content>
             <DetailPill>Node</DetailPill>
             <DetailPill>Java</DetailPill>
-          </Content>
-          <Content>
             <DetailPill>AWS</DetailPill>
-            <DetailPill>CDK / Cloudformation</DetailPill>
+            <DetailPill>Google Cloud</DetailPill>
             <DetailPill>Lambda</DetailPill>
+            <DetailPill>Kubernetes</DetailPill>
+            <DetailPill>CDK / Cloudformation</DetailPill>
             <DetailPill>GraphQL</DetailPill>
             <DetailPill>Rest</DetailPill>
-            <DetailPill>DynamoDB</DetailPill>
-            <DetailPill>PostgreSQL</DetailPill>
-          </Content>
-        </Section>
-        <Section>
-          <SectionHeading bold>Other</SectionHeading>
-          <Content>
-            <DetailPill>Git</DetailPill>
-            <DetailPill>Test-driven-development</DetailPill>
-            <DetailPill>Bash</DetailPill>
-            <DetailPill>Linux</DetailPill>
-            <DetailPill>Agile</DetailPill>
-            <DetailPill>Continuous Deployment</DetailPill>
+            <DetailPill>NoSQL</DetailPill>
+            <DetailPill>SQL</DetailPill>
           </Content>
         </Section>
       </ContentBox>
@@ -87,7 +91,6 @@ export default function CV() {
         <ContentBoxHeading>
           <Icon inline component={Candide} size="lg" />
           Work: Candide
-          <DetailPill>2021-2022</DetailPill>
         </ContentBoxHeading>
         <Section>
           <SectionHeading inline>
@@ -102,20 +105,24 @@ export default function CV() {
           <List>
             <Item>
               Created framework for building multi-page forms in React, first
-              used for the delivering support for selling tickets as gifts.
+              used to deliver support for selling tickets as gifts.
               <DetailPill>Typescript</DetailPill>
               <DetailPill>React</DetailPill>
+              <DetailPill>Next.js</DetailPill>
+              <DetailPill>Chakra UI</DetailPill>
               <DetailPill>Cypress</DetailPill>
             </Item>
             <Item>
               Lead on key integration with third party ticketing solution,
               enabling rapid addition of new features to the platform.
+              <DetailPill>Product ownership</DetailPill>
               <DetailPill>Service-oriented-architecture</DetailPill>
             </Item>
             <Item>
               Defined new approach to tech interviewing, including defining
-              technical questions and introducing more structured behavioural
-              interviewing approach.
+              technical questions and introducing structured behavioural
+              interviewing method.
+              <DetailPill>Interviewing</DetailPill>
               <DetailPill>Hiring</DetailPill>
             </Item>
           </List>
@@ -125,7 +132,6 @@ export default function CV() {
         <ContentBoxHeading>
           <Icon inline component={Briefcase} size="lg" />
           Work: Amazon/IMDb
-          <DetailPill>2011-2021</DetailPill>
         </ContentBoxHeading>
         <Section>
           <SectionHeading inline>
@@ -144,6 +150,7 @@ export default function CV() {
               federated within the first six months.
               <DetailPill>Typescript</DetailPill>
               <DetailPill>Node</DetailPill>
+              <DetailPill>GraphQL</DetailPill>
               <DetailPill>Serverless</DetailPill>
               <DetailPill>Lambda</DetailPill>
               <DetailPill>DynamoDB</DetailPill>
@@ -152,9 +159,23 @@ export default function CV() {
               Launched new data products for external customers, key to the
               growth of this area of IMDb's business.
               <DetailPill>Documentation</DetailPill>
+              <DetailPill>Java</DetailPill>
               <DetailPill>AWS</DetailPill>
               <DetailPill>S3</DetailPill>
-              <DetailPill>SNS / SQS</DetailPill>
+              <DetailPill>SNS</DetailPill>
+              <DetailPill>SQS</DetailPill>
+            </Item>
+            <Item>
+              Qualified Amazon{" "}
+              <ExternalLink href="https://blog.aboutamazon.co.uk/working-at-amazon/what-is-a-bar-raiser-at-amazon">
+                "Bar Raiser"
+              </ExternalLink>
+              , meaning I was responsible for ensuring a high quality interview
+              process and facilitating the final decision. Performed over 300
+              interviews for Amazon across many organizations and roles, both
+              tech and non-tech.
+              <DetailPill>Interviewing</DetailPill>
+              <DetailPill>Hiring</DetailPill>
             </Item>
           </List>
         </Section>
@@ -165,13 +186,15 @@ export default function CV() {
           <DetailPill>2016-2019</DetailPill>
           <DetailPill>Seattle, WA</DetailPill>
           <Content>
-            Tech lead on the team running IMDb's high scale website
+            Tech lead building and operating IMDb's high scale website.
           </Content>
           <List>
             <Item>
-              Load testing and scaling ahead of high traffic events such as the
-              Oscars.
-              <DetailPill>Scaling</DetailPill>
+              First engineer into a new team, defining direction and mission,
+              and later expanding to multiple teams.
+              <DetailPill>Leadership</DetailPill>
+              <DetailPill>Product ownership</DetailPill>
+              <DetailPill>Hiring</DetailPill>
             </Item>
             <Item>
               Started a pattern library such that a new design could be rolled
@@ -200,8 +223,7 @@ export default function CV() {
             <Item>
               Tech lead on a project to enable customers to upload images to
               IMDb for the first time, resulting in millions of images being
-              uploaded, and significantly improving the percentage of pages with
-              an associated image.
+              uploaded.
               <DetailPill>Service-oriented-architecture</DetailPill>
               <DetailPill>React</DetailPill>
               <DetailPill>Java</DetailPill>
@@ -213,36 +235,7 @@ export default function CV() {
               <DetailPill>Java</DetailPill>
               <DetailPill>Javascript</DetailPill>
             </Item>
-            <Item>
-              Designed and created a system for running consistency checks
-              against the IMDb database that enabled us to guarantee that we had
-              no data contradicting complex custom rules that we defined.
-              <DetailPill>PostgreSQL</DetailPill>
-              <DetailPill>Perl</DetailPill>
-            </Item>
           </List>
-        </Section>
-        <Section>
-          <SectionHeading>General</SectionHeading>
-          <Content>
-            Qualified Amazon{" "}
-            <ExternalLink href="https://blog.aboutamazon.co.uk/working-at-amazon/what-is-a-bar-raiser-at-amazon">
-              "Bar Raiser"
-            </ExternalLink>
-            , meaning I was responsible for ensuring a high quality interview
-            process and facilitating the final decision. Performed over 300
-            interviews for Amazon across many organizations and job roles, both
-            technical and non-technical.
-          </Content>
-          <Content>
-            Promoted twice from SDE I (junior-engineer-straight-out-of-uni) to
-            SDE III (Sr Engineer / Team Technical Leader).
-          </Content>
-          <Content>
-            Deeply involved in the career development of the engineers I worked
-            with, giving feedback, and shepherding promotions through Amazon's
-            tech promotions process.
-          </Content>
         </Section>
       </ContentBox>
       <ContentBox float="left" border>
@@ -263,7 +256,16 @@ export default function CV() {
             <Item>
               Netcraft award for best Computer Scientist in the second year.
             </Item>
+            <Item>
+              Won EPSRC summer bursary to develop work on “Vision based
+              exploration for wheeled robots” (2009).
+            </Item>
           </List>
+        </Section>
+        <Section>
+          <SectionHeading inline>Bog-standard UK education</SectionHeading>
+          <DetailPill>Childhood onwards</DetailPill>
+          <Content>GCSEs, A Levels, etc.</Content>
         </Section>
       </ContentBox>
     </main>
