@@ -28,22 +28,11 @@ export default function CV() {
           <ExternalLink href="/cv.pdf">Download PDF Version</ExternalLink>
         </Content>
       </ContentBox>
-      <ContentBox float="right" border>
-        <ContentBoxHeading>
-          <Icon inline component={Candide} size="lg" />
-          Work: Candide
-        </ContentBoxHeading>
-        <Section>
-          <SectionHeading inline>
-            Admissions Team — Senior Engineer
-          </SectionHeading>
-          <DetailPill>2021-current</DetailPill>
-          <DetailPill>Bristol, UK</DetailPill>
-          <Content>... nothing to share yet ...</Content>
-        </Section>
+      <ContentBox float="right">
         <ContentBoxHeading>
           <Icon inline component={Briefcase} size="lg" />
           Work: Amazon/IMDb
+          <DetailPill>2011-2021</DetailPill>
         </ContentBoxHeading>
         <Section>
           <SectionHeading inline>
@@ -165,6 +154,44 @@ export default function CV() {
       </ContentBox>
       <ContentBox float="left" border>
         <ContentBoxHeading>
+          <Icon inline component={Candide} size="lg" />
+          Work: Candide
+          <DetailPill>2021-2022</DetailPill>
+        </ContentBoxHeading>
+        <Section>
+          <SectionHeading inline>
+            Gardens&nbsp;Team — Senior&nbsp;Engineer
+          </SectionHeading>
+          <DetailPill>2021-current</DetailPill>
+          <DetailPill>Bristol, UK</DetailPill>
+          <Content>
+            Building and operating a ticketing platform for gardens and heritage
+            attractions.
+          </Content>
+          <List>
+            <Item>
+              Created framework for building multi-page forms in React, first
+              used for the delivering support for selling tickets as gifts.
+              <DetailPill>Typescript</DetailPill>
+              <DetailPill>React</DetailPill>
+              <DetailPill>Cypress</DetailPill>
+            </Item>
+            <Item>
+              Lead on key integration with third party ticketing solution,
+              enabling rapid addition of new features to the platform.
+              <DetailPill>Service-oriented-architecture</DetailPill>
+            </Item>
+            <Item>
+              Defined new approach to tech interviewing, including defining
+              technical questions and introducing more structured behavioural
+              interviewing approach.
+              <DetailPill>Hiring</DetailPill>
+            </Item>
+          </List>
+        </Section>
+      </ContentBox>
+      <ContentBox float="left" border>
+        <ContentBoxHeading>
           <Icon inline size="lg" component={Book} />
           Tech Skills
         </ContentBoxHeading>
@@ -242,16 +269,7 @@ export default function CV() {
             <Item>
               Netcraft award for best Computer Scientist in the second year.
             </Item>
-            <Item>
-              Won EPSRC summer bursary to develop work on “Vision based
-              exploration for wheeled robots” (2009).
-            </Item>
           </List>
-        </Section>
-        <Section>
-          <SectionHeading inline>Bog-standard UK education</SectionHeading>
-          <DetailPill>Childhood onwards</DetailPill>
-          <Content>GCSEs, A Levels, etc.</Content>
         </Section>
       </ContentBox>
     </main>
