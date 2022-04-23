@@ -5,12 +5,16 @@ export function Section({ children }: { children: React.ReactNode }) {
 export function SectionHeading({
   children,
   inline = false,
+  bold = false,
 }: {
   children: string;
   inline?: boolean;
+  bold?: boolean;
 }) {
   return (
-    <h3 className={`${inline ? "inline" : ""} text-lg`}>
+    <h3
+      className={`${inline ? "inline" : ""} ${bold ? "font-bold" : ""} text-lg`}
+    >
       <span>{children}</span>
     </h3>
   );

@@ -27,8 +27,101 @@ export default function CV() {
           <Icon inline component={Download} />
           <ExternalLink href="/cv.pdf">Download PDF Version</ExternalLink>
         </Content>
+        <Section>
+          <SectionHeading bold>Front-end</SectionHeading>
+          <Content>
+            Worked with foundational web technologies, modern technologies and
+            frameworks.
+          </Content>
+          <Content>
+            <DetailPill>HTML</DetailPill>
+            <DetailPill>CSS</DetailPill>
+            <DetailPill>Javascript</DetailPill>
+          </Content>
+          <Content>
+            <DetailPill>React</DetailPill>
+            <DetailPill>Typescript</DetailPill>
+            <DetailPill>Sass</DetailPill>
+            <DetailPill>Webpack</DetailPill>
+            <DetailPill>Tailwind CSS</DetailPill>
+            <DetailPill>Next.js</DetailPill>
+          </Content>
+        </Section>
+        <Section>
+          <SectionHeading bold>Back-end</SectionHeading>
+          <Content>
+            Built many services, working mostly in AWS with
+            infrastructure-as-code.
+          </Content>
+          <Content>
+            <DetailPill>Service-oriented-architecture</DetailPill>
+            <DetailPill>Serverless</DetailPill>
+          </Content>
+          <Content>
+            <DetailPill>Node</DetailPill>
+            <DetailPill>Java</DetailPill>
+          </Content>
+          <Content>
+            <DetailPill>AWS</DetailPill>
+            <DetailPill>CDK / Cloudformation</DetailPill>
+            <DetailPill>Lambda</DetailPill>
+            <DetailPill>GraphQL</DetailPill>
+            <DetailPill>Rest</DetailPill>
+            <DetailPill>DynamoDB</DetailPill>
+            <DetailPill>PostgreSQL</DetailPill>
+          </Content>
+        </Section>
+        <Section>
+          <SectionHeading bold>Other</SectionHeading>
+          <Content>
+            <DetailPill>Git</DetailPill>
+            <DetailPill>Test-driven-development</DetailPill>
+            <DetailPill>Bash</DetailPill>
+            <DetailPill>Linux</DetailPill>
+            <DetailPill>Agile</DetailPill>
+            <DetailPill>Continuous Deployment</DetailPill>
+          </Content>
+        </Section>
       </ContentBox>
-      <ContentBox float="right">
+      <ContentBox float="right" border>
+        <ContentBoxHeading>
+          <Icon inline component={Candide} size="lg" />
+          Work: Candide
+          <DetailPill>2021-2022</DetailPill>
+        </ContentBoxHeading>
+        <Section>
+          <SectionHeading inline>
+            Gardens&nbsp;Team — Senior&nbsp;Engineer
+          </SectionHeading>
+          <DetailPill>2021-current</DetailPill>
+          <DetailPill>Bristol, UK</DetailPill>
+          <Content>
+            Building and operating a ticketing platform for gardens and heritage
+            attractions.
+          </Content>
+          <List>
+            <Item>
+              Created framework for building multi-page forms in React, first
+              used for the delivering support for selling tickets as gifts.
+              <DetailPill>Typescript</DetailPill>
+              <DetailPill>React</DetailPill>
+              <DetailPill>Cypress</DetailPill>
+            </Item>
+            <Item>
+              Lead on key integration with third party ticketing solution,
+              enabling rapid addition of new features to the platform.
+              <DetailPill>Service-oriented-architecture</DetailPill>
+            </Item>
+            <Item>
+              Defined new approach to tech interviewing, including defining
+              technical questions and introducing more structured behavioural
+              interviewing approach.
+              <DetailPill>Hiring</DetailPill>
+            </Item>
+          </List>
+        </Section>
+      </ContentBox>
+      <ContentBox float="right" border>
         <ContentBoxHeading>
           <Icon inline component={Briefcase} size="lg" />
           Work: Amazon/IMDb
@@ -149,105 +242,6 @@ export default function CV() {
             Deeply involved in the career development of the engineers I worked
             with, giving feedback, and shepherding promotions through Amazon's
             tech promotions process.
-          </Content>
-        </Section>
-      </ContentBox>
-      <ContentBox float="left" border>
-        <ContentBoxHeading>
-          <Icon inline component={Candide} size="lg" />
-          Work: Candide
-          <DetailPill>2021-2022</DetailPill>
-        </ContentBoxHeading>
-        <Section>
-          <SectionHeading inline>
-            Gardens&nbsp;Team — Senior&nbsp;Engineer
-          </SectionHeading>
-          <DetailPill>2021-current</DetailPill>
-          <DetailPill>Bristol, UK</DetailPill>
-          <Content>
-            Building and operating a ticketing platform for gardens and heritage
-            attractions.
-          </Content>
-          <List>
-            <Item>
-              Created framework for building multi-page forms in React, first
-              used for the delivering support for selling tickets as gifts.
-              <DetailPill>Typescript</DetailPill>
-              <DetailPill>React</DetailPill>
-              <DetailPill>Cypress</DetailPill>
-            </Item>
-            <Item>
-              Lead on key integration with third party ticketing solution,
-              enabling rapid addition of new features to the platform.
-              <DetailPill>Service-oriented-architecture</DetailPill>
-            </Item>
-            <Item>
-              Defined new approach to tech interviewing, including defining
-              technical questions and introducing more structured behavioural
-              interviewing approach.
-              <DetailPill>Hiring</DetailPill>
-            </Item>
-          </List>
-        </Section>
-      </ContentBox>
-      <ContentBox float="left" border>
-        <ContentBoxHeading>
-          <Icon inline size="lg" component={Book} />
-          Tech Skills
-        </ContentBoxHeading>
-        <Section>
-          <SectionHeading>Front-end</SectionHeading>
-          <Content>
-            Worked with foundational web technologies, modern technologies and
-            frameworks.
-          </Content>
-          <Content>
-            <DetailPill>HTML</DetailPill>
-            <DetailPill>CSS</DetailPill>
-            <DetailPill>Javascript</DetailPill>
-          </Content>
-          <Content>
-            <DetailPill>React</DetailPill>
-            <DetailPill>Typescript</DetailPill>
-            <DetailPill>Sass</DetailPill>
-            <DetailPill>Webpack</DetailPill>
-            <DetailPill>Tailwind CSS</DetailPill>
-            <DetailPill>Next.js</DetailPill>
-          </Content>
-        </Section>
-        <Section>
-          <SectionHeading>Back-end</SectionHeading>
-          <Content>
-            Built many services, working mostly in AWS with
-            infrastructure-as-code.
-          </Content>
-          <Content>
-            <DetailPill>Service-oriented-architecture</DetailPill>
-            <DetailPill>Serverless</DetailPill>
-          </Content>
-          <Content>
-            <DetailPill>Node</DetailPill>
-            <DetailPill>Java</DetailPill>
-          </Content>
-          <Content>
-            <DetailPill>AWS</DetailPill>
-            <DetailPill>CDK / Cloudformation</DetailPill>
-            <DetailPill>Lambda</DetailPill>
-            <DetailPill>GraphQL</DetailPill>
-            <DetailPill>Rest</DetailPill>
-            <DetailPill>DynamoDB</DetailPill>
-            <DetailPill>PostgreSQL</DetailPill>
-          </Content>
-        </Section>
-        <Section>
-          <SectionHeading>Other</SectionHeading>
-          <Content>
-            <DetailPill>Git</DetailPill>
-            <DetailPill>Test-driven-development</DetailPill>
-            <DetailPill>Bash</DetailPill>
-            <DetailPill>Linux</DetailPill>
-            <DetailPill>Agile</DetailPill>
-            <DetailPill>Continuous Deployment</DetailPill>
           </Content>
         </Section>
       </ContentBox>
