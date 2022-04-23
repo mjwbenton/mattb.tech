@@ -5,9 +5,9 @@
   "license": "UNLICENSED",
   "private": true,
   "devDependencies": {
-    "prettier": "^2.2.1",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.1.5"
+    "prettier": "^2.6.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
   },
   "scripts": {
     "check": "../scripts/check.sh",
@@ -16,6 +16,6 @@
     "check-exists": "[[ -f cv.pdf ]] && exit 0 || (echo 'cv.pdf not found' && exit 1)"
   },
   "dependencies": {
-    "puppeteer": "^8.0.0"
+    "puppeteer": "^13.6.0"
   }
 }
