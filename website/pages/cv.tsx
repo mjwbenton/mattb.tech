@@ -1,6 +1,11 @@
 import React from "react";
-import { Award, Book, Briefcase, Download } from "react-feather";
-import Candide from "../components/Candide";
+import {
+  TbMovie,
+  TbAward,
+  TbFileDownload,
+  TbTicket,
+  TbLeaf,
+} from "react-icons/tb";
 import ContentBox, {
   Content,
   ContentBoxHeading,
@@ -24,7 +29,7 @@ export default function CV() {
           with a bias towards product-focused full-stack engineering.
         </Content>
         <Content className="print:hidden">
-          <Icon inline component={Download} />
+          <Icon inline component={TbFileDownload} />
           <ExternalLink href="/cv.pdf">Download PDF Version</ExternalLink>
         </Content>
         <Section>
@@ -89,14 +94,32 @@ export default function CV() {
       </ContentBox>
       <ContentBox float="right" border>
         <ContentBoxHeading>
-          <Icon inline component={Candide} size="lg" />
+          <Icon inline component={TbLeaf} size="lg" />
+          Work: Ecologi
+        </ContentBoxHeading>
+        <Section>
+          <SectionHeading inline>
+            Zero&nbsp;Team — Tech&nbsp;Lead
+          </SectionHeading>
+          <DetailPill>2022-current</DetailPill>
+          <DetailPill>Bristol, UK</DetailPill>
+          <Content>
+            Building an emissions calculations tool to help businesses work out
+            their carboon footprint.
+          </Content>
+          <Content>More to come...</Content>
+        </Section>
+      </ContentBox>
+      <ContentBox float="right" border className="page-break">
+        <ContentBoxHeading>
+          <Icon inline component={TbTicket} size="lg" />
           Work: Candide
         </ContentBoxHeading>
         <Section>
           <SectionHeading inline>
             Gardens&nbsp;Team — Senior&nbsp;Engineer
           </SectionHeading>
-          <DetailPill>2021-current</DetailPill>
+          <DetailPill>2021-2022</DetailPill>
           <DetailPill>Bristol, UK</DetailPill>
           <Content>
             Building and operating a ticketing platform for gardens and heritage
@@ -130,7 +153,7 @@ export default function CV() {
       </ContentBox>
       <ContentBox float="right" border>
         <ContentBoxHeading>
-          <Icon inline component={Briefcase} size="lg" />
+          <Icon inline component={TbMovie} size="lg" />
           Work: Amazon/IMDb
         </ContentBoxHeading>
         <Section>
@@ -179,7 +202,7 @@ export default function CV() {
             </Item>
           </List>
         </Section>
-        <Section>
+        <Section className="page-break">
           <SectionHeading inline>
             Website&nbsp;Team – Sr.&nbsp;SDE
           </SectionHeading>
@@ -240,7 +263,7 @@ export default function CV() {
       </ContentBox>
       <ContentBox float="left" border>
         <ContentBoxHeading>
-          <Icon inline size="lg" component={Award} />
+          <Icon inline size="lg" component={TbAward} />
           Education
         </ContentBoxHeading>
         <Section>

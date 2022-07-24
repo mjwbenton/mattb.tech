@@ -21,7 +21,7 @@
     "next-optimized-images": "^3.0.0-canary.10",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "react-feather": "^2.0.9",
+    "react-icons": "^4.4.0",
     "react-optimized-image": "^0.4.1",
     "responsive-loader": "^2.3.0",
     "sharp": "^0.30.4"

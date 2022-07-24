@@ -4,18 +4,6 @@
 
 @layer utilities {
   @variants responsive {
-    .svg-stroke-black {
-      stroke: black;
-    }
-  }
-
-  @variants responsive {
-    .children-text-black > * {
-      color: black;
-    }
-  }
-
-  @variants responsive {
     .min-h-screen-spacing-8 {
       min-height: calc(100vh - theme("spacing.8"));
     }
@@ -23,6 +11,14 @@
     .min-h-screen-spacing-16 {
       min-height: calc(100vh - theme("spacing.16"));
     }
+
+    .max-w-80ch {
+      max-width: 80ch;
+    }
+  }
+
+  .page-break {
+    page-break-before: always;
   }
 }
 

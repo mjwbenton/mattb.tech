@@ -9,7 +9,13 @@ const URL = "http://localhost:3000/cv";
   await page.goto(URL);
   await page.pdf({
     path: path.join(__dirname, "cv.pdf"),
-    scale: 0.51,
+    scale: 0.75,
+    margin: {
+      top: "1cm",
+      left: "1cm",
+      bottom: "1cm",
+      right: "1cm",
+    },
     format: "a4",
   });
   await browser.close();

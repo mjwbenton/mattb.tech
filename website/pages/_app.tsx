@@ -1,7 +1,7 @@
 import Head from "next/head";
 import "../styles/index.css";
 import { useRouter } from "next/router";
-import { ArrowLeft } from "react-feather";
+import { TbArrowLeft } from "react-icons/tb";
 import Icon from "../components/Icon";
 import React from "react";
 import Link from "next/link";
@@ -66,7 +66,7 @@ function ReturnButton() {
         >
           <Link href="/">
             <a>
-              <Icon component={ArrowLeft} size="2xl" />
+              <Icon component={TbArrowLeft} size="2xl" />
             </a>
           </Link>
         </motion.div>

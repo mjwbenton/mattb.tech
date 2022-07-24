@@ -1,9 +1,14 @@
-import { GitHub, IconProps, Linkedin, Mail, FileText } from "react-feather";
+import {
+  TbLeaf,
+  TbBrandGithub,
+  TbBrandLinkedin,
+  TbMail,
+  TbFile,
+} from "react-icons/tb";
 import Link from "next/link";
 import Img from "react-optimized-image";
 import ContentBox, { Content } from "../components/ContentBox";
 import Icon from "../components/Icon";
-import Candide from "../components/Candide";
 
 export default function Home() {
   return (
@@ -13,13 +18,12 @@ export default function Home() {
       </ContentBox>
       <ContentBox float="right" border>
         <Content className="text-lg">
-          <span className="font-semibold">Developer.</span> Ex Amazon/IMDb,
-          currently working at{" "}
-          <a href="https://candide.com">
-            <Icon component={Candide} inline color="end" />
-            Candide
-          </a>{" "}
-          in Bristol, UK.
+          <span className="font-semibold">Software Engineer</span>. Tech lead at{" "}
+          <a href="https://ecologi.com" className="whitespace-nowrap">
+            <Icon component={TbLeaf} inline />
+            Ecologi
+          </a>
+          . Ex Amazon/IMDb.
         </Content>
       </ContentBox>
       <ContentBox float="right" border>
@@ -27,26 +31,26 @@ export default function Home() {
           <li>
             <Link href="/cv">
               <a>
-                <Icon component={FileText} inline />
+                <Icon component={TbFile} inline />
                 CV / Resume
               </a>
             </Link>
           </li>
           <li>
             <a href="https://github.com/mjwbenton">
-              <Icon component={GitHub} inline />
+              <Icon component={TbBrandGithub} inline />
               GitHub
             </a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/mattb-tech/">
-              <Icon component={Linkedin} inline />
+              <Icon component={TbBrandLinkedin} inline />
               Linkedin
             </a>
           </li>
           <li>
             <a href="mailto:m@mattb.tech">
-              <Icon component={Mail} inline />
+              <Icon component={TbMail} inline />
               Contact
             </a>
           </li>

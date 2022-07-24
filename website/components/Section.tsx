@@ -1,5 +1,11 @@
-export function Section({ children }: { children: React.ReactNode }) {
-  return <div className="space-y-6 text-left">{children}</div>;
+export function Section({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return <div className={`space-y-6 text-left ${className}`}>{children}</div>;
 }
 
 export function SectionHeading({

@@ -36,7 +36,7 @@ export function Content({
   className?: string;
 }) {
   return (
-    <p className={`${className}`}>
+    <p className={`print:max-w-80ch ${className}`}>
       <span>{children}</span>
     </p>
   );

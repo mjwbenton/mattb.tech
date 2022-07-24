@@ -4,7 +4,7 @@ export default function List({ children }: { children: React.ReactNode }) {
 
 export function Item({ children }: { children: React.ReactNode }) {
   return (
-    <li className="text-base bullet">
+    <li className="text-base bullet print:max-w-80ch">
       <span>{children}</span>
     </li>
   );
