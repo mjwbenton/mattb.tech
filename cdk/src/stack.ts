@@ -1,14 +1,19 @@
 import path from "path";
 import fs from "fs";
-import * as cdk from "@aws-cdk/core";
-import * as s3 from "@aws-cdk/aws-s3";
-import * as route53 from "@aws-cdk/aws-route53";
-import * as route53targets from "@aws-cdk/aws-route53-targets";
-import * as cloudfront from "@aws-cdk/aws-cloudfront";
-import * as acm from "@aws-cdk/aws-certificatemanager";
-import * as s3deploy from "@aws-cdk/aws-s3-deployment";
-import * as origins from "@aws-cdk/aws-cloudfront-origins";
-import * as lambda from "@aws-cdk/aws-lambda";
+import {
+  Stack,
+  StackProps,
+  Duration,
+  aws_s3 as s3,
+  aws_route53 as route53,
+  aws_route53_targets as route53targets,
+  aws_cloudfront as cloudfront,
+  aws_cloudfront_origins as origins,
+  aws_certificatemanager as acm,
+  aws_s3_deployment as s3deploy,
+  aws_lambda as lambda,
+} from "aws-cdk-lib";
+import { Construct } from "constructs";
 import WebsiteRedirect from "./WebsiteRedirect";
 
 const ZONE_NAME = "mattb.tech";
@@ -45,8 +50,8 @@ const DONT_CACHE = s3deploy.CacheControl.fromString(
   "max-age=0,no-cache,no-store,must-revalidate"
 );
 
-export class MattbTechWebsite extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+export class MattbTechWebsite extends Stack {
+  constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
     const hostedZone = route53.HostedZone.fromHostedZoneAttributes(
@@ -141,7 +146,7 @@ export class MattbTechWebsite extends cdk.Stack {
     new route53.ARecord(this, "DomainRecord", {
       zone: hostedZone,
       recordName: DOMAIN_NAME,
-      ttl: cdk.Duration.minutes(5),
+      ttl: Duration.minutes(5),
       target: route53.RecordTarget.fromAlias(
         new route53targets.CloudFrontTarget(distribution)
       ),

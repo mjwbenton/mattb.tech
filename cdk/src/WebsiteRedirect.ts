@@ -1,19 +1,16 @@
-import { Bucket, BucketAccessControl, RedirectProtocol } from "@aws-cdk/aws-s3";
-import { Construct, Duration } from "@aws-cdk/core";
 import {
-  CloudFrontWebDistribution,
-  CloudFrontAllowedMethods,
-  OriginProtocolPolicy,
-  ViewerCertificate,
-  ViewerProtocolPolicy,
-} from "@aws-cdk/aws-cloudfront";
-import { ARecord, IHostedZone, RecordTarget } from "@aws-cdk/aws-route53";
-import { CloudFrontTarget } from "@aws-cdk/aws-route53-targets";
-import { DnsValidatedCertificate } from "@aws-cdk/aws-certificatemanager";
+  aws_s3 as s3,
+  aws_cloudfront as cloudfront,
+  aws_route53 as route53,
+  aws_route53_targets as targets,
+  aws_certificatemanager as acm,
+  Duration,
+} from "aws-cdk-lib";
+import { Construct } from "constructs";
 
 export interface WebsiteRedirectProps {
   redirectTo: string;
-  hostedZone: IHostedZone;
+  hostedZone: route53.IHostedZone;
   domainName: string;
   alternateNames: string[];
 }
@@ -26,21 +23,21 @@ export default class WebsiteRedirect extends Construct {
   ) {
     super(scope, id);
 
-    const redirectBucket = new Bucket(this, "RedirectBucket", {
-      accessControl: BucketAccessControl.PUBLIC_READ,
+    const redirectBucket = new s3.Bucket(this, "RedirectBucket", {
+      accessControl: s3.BucketAccessControl.PUBLIC_READ,
       websiteRedirect: {
         hostName: redirectTo,
-        protocol: RedirectProtocol.HTTPS,
+        protocol: s3.RedirectProtocol.HTTPS,
       },
     });
 
-    const certificate = new DnsValidatedCertificate(this, "Certificate", {
+    const certificate = new acm.DnsValidatedCertificate(this, "Certificate", {
       domainName,
       subjectAlternativeNames: alternateNames,
       hostedZone,
     });
 
-    const redirectDistribution = new CloudFrontWebDistribution(
+    const redirectDistribution = new cloudfront.CloudFrontWebDistribution(
       this,
       "RedirectDistribution",
       {
@@ -51,7 +48,7 @@ export default class WebsiteRedirect extends Construct {
                 isDefaultBehavior: true,
                 defaultTtl: Duration.minutes(5),
                 compress: true,
-                allowedMethods: CloudFrontAllowedMethods.GET_HEAD,
+                allowedMethods: cloudfront.CloudFrontAllowedMethods.GET_HEAD,
                 forwardedValues: {
                   queryString: false,
                 },
@@ -59,24 +56,27 @@ export default class WebsiteRedirect extends Construct {
             ],
             customOriginSource: {
               domainName: redirectBucket.bucketWebsiteDomainName,
-              originProtocolPolicy: OriginProtocolPolicy.HTTP_ONLY,
+              originProtocolPolicy: cloudfront.OriginProtocolPolicy.HTTP_ONLY,
             },
           },
         ],
-        viewerCertificate: ViewerCertificate.fromAcmCertificate(certificate, {
-          aliases: [domainName, ...alternateNames],
-        }),
-        viewerProtocolPolicy: ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+        viewerCertificate: cloudfront.ViewerCertificate.fromAcmCertificate(
+          certificate,
+          {
+            aliases: [domainName, ...alternateNames],
+          }
+        ),
+        viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
       }
     );
 
     [domainName, ...alternateNames].forEach((domain, i) => {
-      new ARecord(this, `ARecord${i}`, {
+      new route53.ARecord(this, `ARecord${i}`, {
         zone: hostedZone,
         recordName: domain,
         ttl: Duration.minutes(5),
-        target: RecordTarget.fromAlias(
-          new CloudFrontTarget(redirectDistribution)
+        target: route53.RecordTarget.fromAlias(
+          new targets.CloudFrontTarget(redirectDistribution)
         ),
       });
     });
