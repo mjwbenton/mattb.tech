@@ -85,7 +85,7 @@ export class MattbTechWebsite extends Stack {
     });
 
     const routerLambda = new lambda.Function(this, "RouterFunction", {
-      runtime: lambda.Runtime.NODEJS_12_X,
+      runtime: lambda.Runtime.NODEJS_16_X,
       handler: "index.handler",
       code: lambda.Code.fromInline(
         fs.readFileSync(path.join(__dirname, "./edge-router.js")).toString()
