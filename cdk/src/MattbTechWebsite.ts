@@ -27,18 +27,6 @@ const REDIRECT_DOMAIN_NAMES = [
     domainName: "www.mattb.tech",
     alternateNames: [],
   },
-  {
-    hostedZone: "mattbenton.co.uk",
-    hostedZoneId: "Z37GS1FXPT1S5S",
-    domainName: "mattbenton.co.uk",
-    alternateNames: ["www.mattbenton.co.uk"],
-  },
-  {
-    hostedZone: "lionsmane.co.uk",
-    hostedZoneId: "ZNKR9NWXWS7UU",
-    domainName: "lionsmane.co.uk",
-    alternateNames: ["www.lionsmane.co.uk"],
-  },
 ];
 
 const OUT_PATH = path.join(__dirname, "../../website/out");
