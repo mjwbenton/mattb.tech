@@ -12,8 +12,7 @@
   "scripts": {
     "check": "../scripts/check.sh",
     "fix": "../scripts/fix.sh",
-    "generate": "ts-node ./generate.ts",
-    "check-exists": "[[ -f cv.pdf ]] && exit 0 || (echo 'cv.pdf not found' && exit 1)"
+    "generate": "ts-node ./generate.ts"
   },
   "dependencies": {
     "puppeteer": "^19.7.2"
