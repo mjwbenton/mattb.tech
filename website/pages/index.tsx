@@ -30,10 +30,8 @@ export default function Home() {
         <ul className="space-y-4 text-right">
           <li>
             <Link href="/cv">
-              <a>
-                <Icon component={TbFile} inline />
-                CV / Resume
-              </a>
+              <Icon component={TbFile} inline />
+              CV / Resume
             </Link>
           </li>
           <li>

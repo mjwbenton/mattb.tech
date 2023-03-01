@@ -65,9 +65,7 @@ function ReturnButton() {
           className="absolute top-12 left-12 lg:top-16 lg:left-16 print:hidden"
         >
           <Link href="/">
-            <a>
-              <Icon component={TbArrowLeft} size="2xl" />
-            </a>
+            <Icon component={TbArrowLeft} size="2xl" />
           </Link>
         </motion.div>
       ) : null}
