@@ -33,7 +33,9 @@ export default function CV() {
           <ExternalLink href="/cv.pdf">Download PDF Version</ExternalLink>
         </Content>
         <Section>
-          <SectionHeading bold>Leadership</SectionHeading>
+          <SectionHeading as="h2" bold>
+            Leadership
+          </SectionHeading>
           <Content>
             Leading and building teams, with a focus on high standards,
             mentorship, positive culture, and hiring.
@@ -54,7 +56,9 @@ export default function CV() {
           </Content>
         </Section>
         <Section>
-          <SectionHeading bold>Front-end</SectionHeading>
+          <SectionHeading as="h2" bold>
+            Front-end
+          </SectionHeading>
           <Content>
             Worked with foundational web technologies, modern technologies and
             frameworks.
@@ -69,7 +73,9 @@ export default function CV() {
           </Content>
         </Section>
         <Section>
-          <SectionHeading bold>Back-end</SectionHeading>
+          <SectionHeading as="h2" bold>
+            Back-end
+          </SectionHeading>
           <Content>
             Built and operated many services and back-end systems. Responsible
             for design, code, reliability, and infrastructure.

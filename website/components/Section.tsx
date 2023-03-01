@@ -12,16 +12,19 @@ export function SectionHeading({
   children,
   inline = false,
   bold = false,
+  as = "h3",
 }: {
   children: string;
   inline?: boolean;
   bold?: boolean;
+  as?: "h3" | "h2";
 }) {
+  const Component = as;
   return (
-    <h3
+    <Component
       className={`${inline ? "inline" : ""} ${bold ? "font-bold" : ""} text-lg`}
     >
       <span>{children}</span>
-    </h3>
+    </Component>
   );
 }
