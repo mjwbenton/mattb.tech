@@ -8,7 +8,7 @@ export function ExternalLink({
   return (
     <a
       href={href}
-      className="text-blue-400 print:text-black underline print:no-underline"
+      className="text-blue-600 print:text-black underline print:no-underline"
     >
       {children}
     </a>
