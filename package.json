@@ -19,5 +19,6 @@
     "check": "yarn workspaces run check",
     "fix": "yarn workspaces run fix",
     "site-test": "yarn workspace @mattb.tech/website run site-test"
-  }
+  },
+  "dependencies": {}
 }

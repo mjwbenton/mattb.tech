@@ -6,7 +6,7 @@ import {
   TbFile,
 } from "react-icons/tb";
 import Link from "next/link";
-import Img from "react-optimized-image";
+import Image from "next/image";
 import ContentBox, { Content } from "../components/ContentBox";
 import Icon from "../components/Icon";
 
@@ -60,9 +60,8 @@ export default function Home() {
 
 function Headshot() {
   return (
-    <Img
+    <Image
       src={require("../headshot.jpg")}
-      sizes={[600]}
       className="rounded-full m-auto"
       width={300}
       height={300}

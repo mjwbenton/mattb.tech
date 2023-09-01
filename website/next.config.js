@@ -1,9 +1,6 @@
-const withPlugins = require("next-compose-plugins");
-const optimizedImages = require("next-optimized-images");
+const withExportImages = require("next-export-optimize-images");
 
-module.exports = withPlugins([[optimizedImages, {}]], {
+module.exports = withExportImages({
+  output: "export",
   reactStrictMode: true,
-  images: {
-    disableStaticImages: true,
-  },
 });

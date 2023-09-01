@@ -6,7 +6,7 @@
   "author": "Matt Benton <m@mattb.tech>",
   "scripts": {
     "dev": "next dev",
-    "build": "rm -Rf out .next && next build && next export",
+    "build": "rm -Rf out .next && next build && next-export-optimize-images",
     "start": "next start",
     "check": "../scripts/check.sh",
     "fix": "../scripts/fix.sh",
@@ -16,25 +16,22 @@
   },
   "dependencies": {
     "framer-motion": "^6.3.1",
-    "next": "13.2.3",
-    "next-compose-plugins": "^2.2.1",
-    "next-optimized-images": "^3.0.0-canary.10",
+    "next": "13.4.19",
+    "next-export-optimize-images": "^3.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
-    "react-optimized-image": "^0.4.1",
-    "responsive-loader": "^3.1.2",
-    "sharp": "^0.31.3"
+    "sharp": "^0.32.5"
   },
   "devDependencies": {
     "@lhci/cli": "^0.9.0",
     "@types/node": "^18.14.2",
-    "@types/react": "^18.0.6",
+    "@types/react": "^18.2.21",
     "autoprefixer": "^10.4.4",
     "pa11y-ci": "^3.0.1",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
     "tailwindcss": "^2.0.3",
-    "typescript": "^4.6.3"
+    "typescript": "^5.2.2"
   }
 }
