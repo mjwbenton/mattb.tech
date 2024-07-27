@@ -28,3 +28,11 @@
     font-size: theme("fontSize.2xl");
   }
 }
+
+@layer base {
+  @media print {
+    html {
+      font-size: 15px;
+    }
+  }
+}

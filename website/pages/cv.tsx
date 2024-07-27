@@ -21,12 +21,8 @@ export default function CV() {
     <main>
       <ContentBox float="left">
         <Content className="text-lg">
-          Senior developer and tech-lead with 10 years experience at Amazon
-          behind me.
-        </Content>
-        <Content className="text-lg">
-          During that time I worked in many different areas of the business,
-          with a bias towards product-focused full-stack engineering.
+          Senior full-stack developer and engineering leader with 13 years
+          experience, 10 of which spent at Amazon.
         </Content>
         <Content className="print:hidden">
           <Icon inline component={TbFileDownload} />
@@ -38,14 +34,13 @@ export default function CV() {
           </SectionHeading>
           <Content>
             Leading and building teams, with a focus on high standards,
-            mentorship, positive culture, and hiring.
+            mentorship, positive culture.
           </Content>
           <Content>
             <DetailPill>Team building</DetailPill>
             <DetailPill>Team direction and mission</DetailPill>
             <DetailPill>Mentoring</DetailPill>
             <DetailPill>Interviewing / Hiring</DetailPill>
-            <DetailPill>Product ownership</DetailPill>
           </Content>
           <Content>
             <DetailPill>Pull requests</DetailPill>
@@ -91,6 +86,7 @@ export default function CV() {
             <DetailPill>Lambda</DetailPill>
             <DetailPill>Kubernetes</DetailPill>
             <DetailPill>CDK / Cloudformation</DetailPill>
+            <DetailPill>Terraform</DetailPill>
             <DetailPill>GraphQL</DetailPill>
             <DetailPill>Rest</DetailPill>
             <DetailPill>NoSQL</DetailPill>
@@ -100,23 +96,103 @@ export default function CV() {
       </ContentBox>
       <ContentBox float="right" border>
         <ContentBoxHeading>
+          <Icon inline size="lg" component={TbAward} />
+          Education
+        </ContentBoxHeading>
+        <Section>
+          <SectionHeading inline>
+            MEng Computer Science 1st class from University of Bristol
+          </SectionHeading>
+          <DetailPill>2007-2011</DetailPill>
+          <List>
+            <Item>
+              Scholarships for academic achievement from UBS Bank and Mysis
+              Foundation.
+            </Item>
+            <Item>
+              Netcraft award for best Computer Scientist in the second year.
+            </Item>
+          </List>
+        </Section>
+        <Section>
+          <SectionHeading inline>Bog-standard UK education</SectionHeading>
+          <DetailPill>Childhood onwards</DetailPill>
+          <Content>GCSEs, A Levels, etc.</Content>
+        </Section>
+      </ContentBox>
+      <ContentBox float="right" border className="page-break">
+        <ContentBoxHeading>
           <Icon inline component={TbLeaf} size="lg" />
           Work: Ecologi
         </ContentBoxHeading>
         <Section>
+          <SectionHeading inline>Engineering&nbsp;Lead</SectionHeading>
+          <DetailPill>2023-current</DetailPill>
+          <DetailPill>Bristol, UK</DetailPill>
+          <Content>
+            Promoted to lead engineering across the company, focusing most of my
+            efforts onto Ecologi’s climate solution funding platform. Initially
+            managed the team, before transitioning into being the most senior
+            IC.
+          </Content>
+          <List>
+            <Item>
+              Manager of the engineering team through difficult restructuring
+              process, defining the plan to reduce, selection pools and
+              selection criteria.
+              <DetailPill>Performance management</DetailPill>
+              <DetailPill>Restructuring</DetailPill>
+            </Item>
+            <Item>
+              Running process to define OKRs within engineering, creating
+              proposed objectives, gathering feedback from stakeholders and
+              drafting the final plan.
+              <DetailPill>Goal Setting</DetailPill>
+              <DetailPill>OKRs</DetailPill>
+              <DetailPill>Stakeholder Management</DetailPill>
+            </Item>
+            <Item>
+              Created strategy for closing key data gaps and democratising data
+              access across the company.
+              <DetailPill>Data</DetailPill>
+            </Item>
+          </List>
+        </Section>
+        <Section>
           <SectionHeading inline>
             Zero&nbsp;Team — Tech&nbsp;Lead
           </SectionHeading>
-          <DetailPill>2022-current</DetailPill>
+          <DetailPill>2022-2023</DetailPill>
           <DetailPill>Bristol, UK</DetailPill>
           <Content>
-            Building an emissions calculations tool to help businesses work out
-            their carboon footprint.
+            Managing and providing technical leadership to the team building
+            Ecologi Zero, a carbon accounting tool for small businesses.
           </Content>
-          <Content>More to come...</Content>
+          <List>
+            <Item>
+              Providing leadership over the delivery of countless new features
+              that enabled us to go from 0 to over 1,000 customers.
+              <DetailPill>TypeScript</DetailPill>
+              <DetailPill>GraphQL</DetailPill>
+              <DetailPill>React</DetailPill>
+              <DetailPill>MySQL</DetailPill>
+            </Item>
+            <Item>
+              Overhauled testing practice to take us from a slow, manual testing
+              and deployment process, to one that is fully automated.
+              <DetailPill>Test Automation</DetailPill>
+              <DetailPill>Continuous Deployment</DetailPill>
+            </Item>
+            <Item>
+              Created performance review process for engineers including self
+              review and 360 feedback portions.
+              <DetailPill>Performance Reviews</DetailPill>
+              <DetailPill>Feedback</DetailPill>
+            </Item>
+          </List>
         </Section>
       </ContentBox>
-      <ContentBox float="right" border className="page-break">
+      <ContentBox float="left" border>
         <ContentBoxHeading>
           <Icon inline component={TbTicket} size="lg" />
           Work: Candide
@@ -138,14 +214,7 @@ export default function CV() {
               <DetailPill>Typescript</DetailPill>
               <DetailPill>React</DetailPill>
               <DetailPill>Next.js</DetailPill>
-              <DetailPill>Chakra UI</DetailPill>
               <DetailPill>Cypress</DetailPill>
-            </Item>
-            <Item>
-              Lead on key integration with third party ticketing solution,
-              enabling rapid addition of new features to the platform.
-              <DetailPill>Product ownership</DetailPill>
-              <DetailPill>Service-oriented-architecture</DetailPill>
             </Item>
             <Item>
               Defined new approach to tech interviewing, including defining
@@ -157,7 +226,7 @@ export default function CV() {
           </List>
         </Section>
       </ContentBox>
-      <ContentBox float="right" border>
+      <ContentBox float="left" border className="page-break">
         <ContentBoxHeading>
           <Icon inline component={TbMovie} size="lg" />
           Work: Amazon/IMDb
@@ -208,7 +277,7 @@ export default function CV() {
             </Item>
           </List>
         </Section>
-        <Section className="page-break">
+        <Section>
           <SectionHeading inline>
             Website&nbsp;Team – Sr.&nbsp;SDE
           </SectionHeading>
@@ -265,36 +334,6 @@ export default function CV() {
               <DetailPill>Javascript</DetailPill>
             </Item>
           </List>
-        </Section>
-      </ContentBox>
-      <ContentBox float="left" border>
-        <ContentBoxHeading>
-          <Icon inline size="lg" component={TbAward} />
-          Education
-        </ContentBoxHeading>
-        <Section>
-          <SectionHeading inline>
-            MEng Computer Science 1st class from University of Bristol
-          </SectionHeading>
-          <DetailPill>2007-2011</DetailPill>
-          <List>
-            <Item>
-              Scholarships for academic achievement from UBS Bank and Mysis
-              Foundation.
-            </Item>
-            <Item>
-              Netcraft award for best Computer Scientist in the second year.
-            </Item>
-            <Item>
-              Won EPSRC summer bursary to develop work on “Vision based
-              exploration for wheeled robots” (2009).
-            </Item>
-          </List>
-        </Section>
-        <Section>
-          <SectionHeading inline>Bog-standard UK education</SectionHeading>
-          <DetailPill>Childhood onwards</DetailPill>
-          <Content>GCSEs, A Levels, etc.</Content>
         </Section>
       </ContentBox>
     </main>
