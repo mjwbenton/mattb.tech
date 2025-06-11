@@ -21,7 +21,7 @@ export default function CV() {
     <main>
       <ContentBox float="left">
         <Content className="text-lg">
-          Senior full-stack developer and engineering leader with 13 years
+          Senior full-stack developer and engineering leader with 14 years
           experience, 10 of which spent at Amazon.
         </Content>
         <Content className="print:hidden">
