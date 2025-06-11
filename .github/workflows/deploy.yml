@@ -7,14 +7,14 @@ permissions:
   contents: read
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: "20"
           cache: "yarn"
-      - uses: aws-actions/configure-aws-credentials@v1-node16
+      - uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::858777967843:role/github-actions-cdk
           aws-region: us-east-1
@@ -24,23 +24,23 @@ jobs:
       - run: yarn deploy
   lighthouse:
     needs: deploy
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: "20"
           cache: "yarn"
       - run: yarn install --frozen-lockfile
       - run: yarn workspace @mattb.tech/website run lighthouse
   pa11y:
     needs: deploy
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: "20"
           cache: "yarn"
       - run: yarn install --frozen-lockfile
       - run: yarn workspace @mattb.tech/website run pa11y
