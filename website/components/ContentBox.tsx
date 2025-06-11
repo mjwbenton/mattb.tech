@@ -17,7 +17,7 @@ export default function ContentBox({
       animate={{ scale: 1, y: 0 }}
       exit={{ scale: 0.8, y: 50 }}
       transition={{ duration: 0.15 }}
-      className={`max-w-full overflow-hidden lg:w-6/12 px-16 pb-16 pt-10 space-y-10
+      className={`max-w-full overflow-hidden lg:w-6/12 px-16 pb-16 pt-10 space-y-6
         ${border ? "border-t-2 border-brandPurple print:border-black" : ""}
         ${float === "left" ? "lg:float-left lg:clear-left" : ""}
         ${float === "right" ? "lg:float-right lg:clear-right" : ""}

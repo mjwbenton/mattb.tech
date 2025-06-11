@@ -48,6 +48,7 @@ export default function CV() {
             <DetailPill>Testing</DetailPill>
             <DetailPill>Pairing</DetailPill>
             <DetailPill>Continuous integration/deployment</DetailPill>
+            <DetailPill>AI-assisted development</DetailPill>
           </Content>
         </Section>
         <Section>
@@ -159,6 +160,14 @@ export default function CV() {
               company, Net Zero Now, performing technical due dilligence and
               leading the approach to product integration.
               <DetailPill>Acquisition</DetailPill>
+            </Item>
+            <Item>
+              Ensured every engineer at Ecologi was making the transition to
+              working with AI-assisted tools, giving them space to learn and
+              organising a hackday to generate ideas for how LLMs could improve
+              our product.
+              <DetailPill>LLMs</DetailPill>
+              <DetailPill>AI-assisted coding</DetailPill>
             </Item>
           </List>
         </Section>
