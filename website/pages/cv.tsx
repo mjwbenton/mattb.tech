@@ -130,14 +130,12 @@ export default function CV() {
           <DetailPill>2023-current</DetailPill>
           <DetailPill>Bristol, UK</DetailPill>
           <Content>
-            Promoted to lead engineering across the company, focusing most of my
-            efforts onto Ecologi’s climate solution funding platform. Initially
-            managed the team, before transitioning into being the most senior
-            IC.
+            Promoted to lead engineering across the company. Initially managed
+            the team, before transitioning into being the most senior IC.
           </Content>
           <List>
             <Item>
-              Manager of the engineering team through difficult restructuring
+              Manager of the engineering team through a difficult restructuring
               process, defining the plan to reduce, selection pools and
               selection criteria.
               <DetailPill>Performance management</DetailPill>
@@ -155,6 +153,12 @@ export default function CV() {
               Created strategy for closing key data gaps and democratising data
               access across the company.
               <DetailPill>Data</DetailPill>
+            </Item>
+            <Item>
+              Worked on technical strategy for the acquisition of another
+              company, Net Zero Now, performing technical due dilligence and
+              leading the approach to product integration.
+              <DetailPill>Acquisition</DetailPill>
             </Item>
           </List>
         </Section>
