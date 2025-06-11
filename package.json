@@ -20,5 +20,6 @@
     "fix": "yarn workspaces run fix",
     "site-test": "yarn workspace @mattb.tech/website run site-test"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }
