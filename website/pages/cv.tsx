@@ -21,7 +21,7 @@ export default function CV() {
     <main>
       <ContentBox float="left">
         <Content className="text-lg">
-          Senior full-stack developer and engineering leader with 14 years
+          Senior full-stack developer and engineering leader with 15 years
           experience, 10 of which spent at Amazon.
         </Content>
         <Content className="print:hidden">
@@ -46,7 +46,6 @@ export default function CV() {
             <DetailPill>Pull requests</DetailPill>
             <DetailPill>Linting</DetailPill>
             <DetailPill>Testing</DetailPill>
-            <DetailPill>Pairing</DetailPill>
             <DetailPill>Continuous integration/deployment</DetailPill>
             <DetailPill>AI-assisted development</DetailPill>
           </Content>
@@ -85,7 +84,6 @@ export default function CV() {
             <DetailPill>AWS</DetailPill>
             <DetailPill>Google Cloud</DetailPill>
             <DetailPill>Lambda</DetailPill>
-            <DetailPill>Kubernetes</DetailPill>
             <DetailPill>CDK / Cloudformation</DetailPill>
             <DetailPill>Terraform</DetailPill>
             <DetailPill>GraphQL</DetailPill>
@@ -93,32 +91,6 @@ export default function CV() {
             <DetailPill>NoSQL</DetailPill>
             <DetailPill>SQL</DetailPill>
           </Content>
-        </Section>
-      </ContentBox>
-      <ContentBox float="right" border>
-        <ContentBoxHeading>
-          <Icon inline size="lg" component={TbAward} />
-          Education
-        </ContentBoxHeading>
-        <Section>
-          <SectionHeading inline>
-            MEng Computer Science 1st class from University of Bristol
-          </SectionHeading>
-          <DetailPill>2007-2011</DetailPill>
-          <List>
-            <Item>
-              Scholarships for academic achievement from UBS Bank and Mysis
-              Foundation.
-            </Item>
-            <Item>
-              Netcraft award for best Computer Scientist in the second year.
-            </Item>
-          </List>
-        </Section>
-        <Section>
-          <SectionHeading inline>Bog-standard UK education</SectionHeading>
-          <DetailPill>Childhood onwards</DetailPill>
-          <Content>GCSEs, A Levels, etc.</Content>
         </Section>
       </ContentBox>
       <ContentBox float="right" border className="page-break">
@@ -143,23 +115,11 @@ export default function CV() {
               <DetailPill>Restructuring</DetailPill>
             </Item>
             <Item>
-              Running process to define OKRs within engineering, creating
-              proposed objectives, gathering feedback from stakeholders and
-              drafting the final plan.
-              <DetailPill>Goal Setting</DetailPill>
-              <DetailPill>OKRs</DetailPill>
-              <DetailPill>Stakeholder Management</DetailPill>
-            </Item>
-            <Item>
-              Created strategy for closing key data gaps and democratising data
-              access across the company.
+              Defined and delivered strategy to close key data gaps and
+              democratise data access. Launched reporting with 93% adoption
+              across the company. Drove revenue traceability from order to
+              fulfillment from 29% to 100%.
               <DetailPill>Data</DetailPill>
-            </Item>
-            <Item>
-              Worked on technical strategy for the acquisition of another
-              company, Net Zero Now, performing technical due dilligence and
-              leading the approach to product integration.
-              <DetailPill>Acquisition</DetailPill>
             </Item>
             <Item>
               Ensured every engineer at Ecologi was making the transition to
@@ -168,6 +128,16 @@ export default function CV() {
               our product.
               <DetailPill>LLMs</DetailPill>
               <DetailPill>AI-assisted coding</DetailPill>
+            </Item>
+            <Item>
+              Led transition from manual QA process with 4 QA engineers and
+              weekly releases, to fully automated testing and continuous
+              deployment, enabling multiple releases per day. Mentored and
+              supported a QA engineer in transitioning to a software engineering
+              role.
+              <DetailPill>Test Automation</DetailPill>
+              <DetailPill>Continuous Deployment</DetailPill>
+              <DetailPill>Mentoring</DetailPill>
             </Item>
           </List>
         </Section>
@@ -189,12 +159,6 @@ export default function CV() {
               <DetailPill>GraphQL</DetailPill>
               <DetailPill>React</DetailPill>
               <DetailPill>MySQL</DetailPill>
-            </Item>
-            <Item>
-              Overhauled testing practice to take us from a slow, manual testing
-              and deployment process, to one that is fully automated.
-              <DetailPill>Test Automation</DetailPill>
-              <DetailPill>Continuous Deployment</DetailPill>
             </Item>
             <Item>
               Created performance review process for engineers including self
@@ -347,6 +311,32 @@ export default function CV() {
               <DetailPill>Javascript</DetailPill>
             </Item>
           </List>
+        </Section>
+      </ContentBox>
+      <ContentBox float="right" border>
+        <ContentBoxHeading>
+          <Icon inline size="lg" component={TbAward} />
+          Education
+        </ContentBoxHeading>
+        <Section>
+          <SectionHeading inline>
+            MEng Computer Science 1st class from University of Bristol
+          </SectionHeading>
+          <DetailPill>2007-2011</DetailPill>
+          <List>
+            <Item>
+              Scholarships for academic achievement from UBS Bank and Mysis
+              Foundation.
+            </Item>
+            <Item>
+              Netcraft award for best Computer Scientist in the second year.
+            </Item>
+          </List>
+        </Section>
+        <Section>
+          <SectionHeading inline>Bog-standard UK education</SectionHeading>
+          <DetailPill>Childhood onwards</DetailPill>
+          <Content>GCSEs, A Levels, etc.</Content>
         </Section>
       </ContentBox>
     </main>
