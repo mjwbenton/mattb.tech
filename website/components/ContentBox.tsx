@@ -15,7 +15,7 @@ export default function ContentBox({
       animate={{ scale: 1, y: 0 }}
       exit={{ scale: 0.8, y: 50 }}
       transition={{ duration: 0.15 }}
-      className={`max-w-3xl mx-auto overflow-hidden px-16 pb-16 pt-10 space-y-6
+      className={`max-w-3xl mx-auto overflow-hidden px-16 print:px-8 pb-16 print:pb-12 pt-10 print:pt-8 space-y-6 print:space-y-5
         ${border ? "border-t-2 border-brandPurple print:border-black" : ""}
         ${className}`}
     >
@@ -32,7 +32,7 @@ export function Content({
   className?: string;
 }) {
   return (
-    <p className={`print:max-w-80ch ${className}`}>
+    <p className={className}>
       <span>{children}</span>
     </p>
   );

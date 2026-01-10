@@ -5,7 +5,7 @@ export function Section({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <div className={`space-y-6 text-left ${className}`}>{children}</div>;
+  return <div className={`space-y-6 print:space-y-4 text-left ${className}`}>{children}</div>;
 }
 
 export function SectionHeading({

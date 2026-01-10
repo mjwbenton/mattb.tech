@@ -19,10 +19,10 @@ function MyApp({ Component, pageProps }: any) {
         />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <div className="p-4 lg:p-8 print:p-4 font-mono bg-brandBackground print:bg-white text-brandPurple print:text-black">
-        <div className="flex border-8 border-brandPurple print:border-none min-h-screen-spacing-8 lg:min-h-screen-spacing-16 box-border">
+      <div className="p-4 lg:p-8 font-mono bg-brandBackground print:bg-white text-brandPurple print:text-black">
+        <div className="flex border-8 border-brandPurple print:border-0 min-h-screen-spacing-8 lg:min-h-screen-spacing-16 box-border">
           <div className="w-full">
-            <header className="w-full pt-16 lg:py-20 text-center text-2xl lg:text-3xl print:py-8 print:text-xl">
+            <header className="w-full pt-16 lg:py-20 print:py-8 text-center text-2xl lg:text-3xl print:text-xl">
               <h1>
                 <span className="text-brandPurple print:hidden">mattb</span>
                 <span className="text-brandPurple text-opacity-70 print:hidden">

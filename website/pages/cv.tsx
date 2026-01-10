@@ -141,7 +141,7 @@ export default function CV() {
             </Item>
           </List>
         </Section>
-        <Section>
+        <Section className="print-page-break">
           <SectionHeading inline>
             Zero&nbsp;Team — Tech&nbsp;Lead
           </SectionHeading>
