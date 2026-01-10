@@ -18,7 +18,8 @@ export default function Home() {
       </ContentBox>
       <ContentBox float="right" border>
         <Content className="text-lg">
-          <span className="font-semibold">Software Engineer</span>. Tech lead at{" "}
+          <span className="font-semibold">Software Engineer</span>. Engineering
+          lead at{" "}
           <a href="https://ecologi.com" className="whitespace-nowrap">
             <Icon component={TbLeaf} inline />
             Ecologi
