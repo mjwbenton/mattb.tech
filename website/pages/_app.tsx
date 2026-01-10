@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: any) {
                 <span className="hidden print:inline text-black">
                   Matt Benton {"<m@mattb.tech>"}
                   <br />
-                  Senior Software Engineer, Bristol, UK
+                  Engineering Leader, Bristol, UK
                 </span>
               </h1>
               <ReturnButton />

@@ -22,7 +22,7 @@ export default function CV() {
       <ContentBox>
         <Content className="text-lg">
           Senior full-stack developer and engineering leader with 15 years
-          experience, 10 of which spent at Amazon.
+          experience.
         </Content>
         <Content className="print:hidden">
           <Icon inline component={TbFileDownload} />
