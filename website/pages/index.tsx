@@ -13,10 +13,10 @@ import Icon from "../components/Icon";
 export default function Home() {
   return (
     <main>
-      <ContentBox float="left">
+      <ContentBox>
         <Headshot />
       </ContentBox>
-      <ContentBox float="right" border>
+      <ContentBox border>
         <Content className="text-lg">
           <span className="font-semibold">Software Engineer</span>. Engineering
           lead at{" "}
@@ -27,7 +27,7 @@ export default function Home() {
           . Ex Amazon/IMDb.
         </Content>
       </ContentBox>
-      <ContentBox float="right" border>
+      <ContentBox border>
         <ul className="space-y-4 text-right">
           <li>
             <Link href="/cv">

@@ -19,7 +19,7 @@ import { Section, SectionHeading } from "../components/Section";
 export default function CV() {
   return (
     <main>
-      <ContentBox float="left">
+      <ContentBox>
         <Content className="text-lg">
           Senior full-stack developer and engineering leader with 15 years
           experience, 10 of which spent at Amazon.
@@ -93,7 +93,7 @@ export default function CV() {
           </Content>
         </Section>
       </ContentBox>
-      <ContentBox float="right" border className="page-break">
+      <ContentBox border>
         <ContentBoxHeading>
           <Icon inline component={TbLeaf} size="lg" />
           Work: Ecologi
@@ -169,7 +169,7 @@ export default function CV() {
           </List>
         </Section>
       </ContentBox>
-      <ContentBox float="left" border>
+      <ContentBox border>
         <ContentBoxHeading>
           <Icon inline component={TbTicket} size="lg" />
           Work: Candide
@@ -203,7 +203,7 @@ export default function CV() {
           </List>
         </Section>
       </ContentBox>
-      <ContentBox float="left" border className="page-break">
+      <ContentBox border>
         <ContentBoxHeading>
           <Icon inline component={TbMovie} size="lg" />
           Work: Amazon/IMDb
@@ -313,7 +313,7 @@ export default function CV() {
           </List>
         </Section>
       </ContentBox>
-      <ContentBox float="right" border>
+      <ContentBox border>
         <ContentBoxHeading>
           <Icon inline size="lg" component={TbAward} />
           Education
