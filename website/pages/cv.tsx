@@ -100,7 +100,7 @@ export default function CV() {
         </ContentBoxHeading>
         <Section>
           <SectionHeading inline>Engineering&nbsp;Lead</SectionHeading>
-          <DetailPill>2023-current</DetailPill>
+          <DetailPill>2023-2026</DetailPill>
           <DetailPill>Bristol, UK</DetailPill>
           <Content>
             Promoted to lead engineering across the company. Initially managed
